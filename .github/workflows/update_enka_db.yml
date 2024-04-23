@@ -1,0 +1,44 @@
+name: Update EnkaDB Assets
+
+on:
+    workflow_dispatch: {}
+    schedule:
+        - cron: '0 12 * * *'
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                node-version: 20
+
+            - name: Fetch latest commit SHA
+              id: latest_sha
+              run: echo "::set-output name=sha::$(git ls-remote https://github.com/EnkaNetwork/API-docs.git HEAD | cut -f1)"
+
+            - name: Install QuickType
+              id: install_quicktype
+              run: npm install -g quicktype
+
+            - name: Run update asset meta script
+              id: compare_shas
+              run: make
+
+            - name: Create Pull Request
+              uses: peter-evans/create-pull-request@v3
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                branch: update-enka-asset-${{ github.run_number }}
+                base: main
+                title: "Update EnkaDB Assets"
+                body: |
+                  This PR updates the EnkaDB Asset JSON files.
+                delete-branch: true
+                assignees: CanglongCl
+                reviewers: CanglongCl
+                team-reviewers: |
+                  owners
+                  maintainers
