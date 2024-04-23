@@ -37,8 +37,8 @@ jobs:
                 body: |
                   This PR updates the EnkaDB Asset JSON files.
                 delete-branch: true
-                assignees: CanglongCl
-                reviewers: CanglongCl
+                assignees: ShikiSuen
+                reviewers: ShikiSuen
                 team-reviewers: |
                   owners
                   maintainers
