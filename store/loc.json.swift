@@ -9,14 +9,14 @@ import Foundation
 struct LOCJSON: Codable {
     let en, ru, vi, th: [String: String]
     let pt, ko, ja, id: [String: String]
-    let fr, es, de, zhTW: [String: String]
+    let fr, es, de, zhTw: [String: String]
     let zhCN, it, tr, ar: [String: String]
     let uk: [String: String]
 
     enum CodingKeys: String, CodingKey {
         case en, ru, vi, th, pt, ko, ja, id, fr, es, de
-        case zhTW = "zh-TW"
-        case zhCN = "zh-CN"
+        case zhTw = "zh-tw"
+        case zhCN = "zh-cn"
         case it, tr, ar, uk
     }
 }
@@ -51,7 +51,7 @@ extension LOCJSON {
         fr: [String: String]? = nil,
         es: [String: String]? = nil,
         de: [String: String]? = nil,
-        zhTW: [String: String]? = nil,
+        zhTw: [String: String]? = nil,
         zhCN: [String: String]? = nil,
         it: [String: String]? = nil,
         tr: [String: String]? = nil,
@@ -70,7 +70,7 @@ extension LOCJSON {
             fr: fr ?? self.fr,
             es: es ?? self.es,
             de: de ?? self.de,
-            zhTW: zhTW ?? self.zhTW,
+            zhTw: zhTw ?? self.zhTw,
             zhCN: zhCN ?? self.zhCN,
             it: it ?? self.it,
             tr: tr ?? self.tr,
