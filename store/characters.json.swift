@@ -96,7 +96,6 @@ struct CharactersJSON: Codable {
     let the10000100: The10000100
     let the10000101: The10000101
     let the10000102: The10000102
-    let the11000046: The10000015
     let the10000005503: The10000005503
     let the10000005504: The10000005
     let the10000005506: The10000005506
@@ -200,7 +199,6 @@ struct CharactersJSON: Codable {
         case the10000100 = "10000100"
         case the10000101 = "10000101"
         case the10000102 = "10000102"
-        case the11000046 = "11000046"
         case the10000005503 = "10000005-503"
         case the10000005504 = "10000005-504"
         case the10000005506 = "10000005-506"
@@ -324,7 +322,6 @@ extension CharactersJSON {
         the10000100: The10000100? = nil,
         the10000101: The10000101? = nil,
         the10000102: The10000102? = nil,
-        the11000046: The10000015? = nil,
         the10000005503: The10000005503? = nil,
         the10000005504: The10000005? = nil,
         the10000005506: The10000005506? = nil,
@@ -428,7 +425,6 @@ extension CharactersJSON {
             the10000100: the10000100 ?? self.the10000100,
             the10000101: the10000101 ?? self.the10000101,
             the10000102: the10000102 ?? self.the10000102,
-            the11000046: the11000046 ?? self.the11000046,
             the10000005503: the10000005503 ?? self.the10000005503,
             the10000005504: the10000005504 ?? self.the10000005504,
             the10000005506: the10000005506 ?? self.the10000005506,
@@ -1840,7 +1836,7 @@ struct The10000015: Codable {
     let proudMap: [String: Int]
     let nameTextMapHash: Int
     let sideIconName, qualityType, weaponType: String
-    let costumes: The10000015_Costumes?
+    let costumes: The10000015_Costumes
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1884,7 +1880,7 @@ extension The10000015 {
         sideIconName: String? = nil,
         qualityType: String? = nil,
         weaponType: String? = nil,
-        costumes: The10000015_Costumes?? = nil
+        costumes: The10000015_Costumes? = nil
     ) -> The10000015 {
         return The10000015(
             element: element ?? self.element,
