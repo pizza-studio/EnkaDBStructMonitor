@@ -84,6 +84,7 @@ extension HonkerCharactersJSONValue {
 enum AvatarBaseType: String, Codable {
     case knight = "Knight"
     case mage = "Mage"
+    case memory = "Memory"
     case priest = "Priest"
     case rogue = "Rogue"
     case shaman = "Shaman"
