@@ -102,6 +102,7 @@ struct CharactersJSON: Codable {
     let the10000106: The10000106
     let the10000107: The10000107
     let the10000108: The10000108
+    let the10000109: The10000109
     let the10000901: The10000023_Class
     let the10000902: The10000046_Class
     let the11000046: The10000015
@@ -216,6 +217,7 @@ struct CharactersJSON: Codable {
         case the10000106 = "10000106"
         case the10000107 = "10000107"
         case the10000108 = "10000108"
+        case the10000109 = "10000109"
         case the10000901 = "10000901"
         case the10000902 = "10000902"
         case the11000046 = "11000046"
@@ -350,6 +352,7 @@ extension CharactersJSON {
         the10000106: The10000106? = nil,
         the10000107: The10000107? = nil,
         the10000108: The10000108? = nil,
+        the10000109: The10000109? = nil,
         the10000901: The10000023_Class? = nil,
         the10000902: The10000046_Class? = nil,
         the11000046: The10000015? = nil,
@@ -464,6 +467,7 @@ extension CharactersJSON {
             the10000106: the10000106 ?? self.the10000106,
             the10000107: the10000107 ?? self.the10000107,
             the10000108: the10000108 ?? self.the10000108,
+            the10000109: the10000109 ?? self.the10000109,
             the10000901: the10000901 ?? self.the10000901,
             the10000902: the10000902 ?? self.the10000902,
             the11000046: the11000046 ?? self.the11000046,
@@ -9352,6 +9356,80 @@ extension The10000108 {
         weaponType: String? = nil
     ) -> The10000108 {
         return The10000108(
+            element: element ?? self.element,
+            consts: consts ?? self.consts,
+            skillOrder: skillOrder ?? self.skillOrder,
+            skills: skills ?? self.skills,
+            proudMap: proudMap ?? self.proudMap,
+            nameTextMapHash: nameTextMapHash ?? self.nameTextMapHash,
+            sideIconName: sideIconName ?? self.sideIconName,
+            qualityType: qualityType ?? self.qualityType,
+            weaponType: weaponType ?? self.weaponType
+        )
+    }
+
+    func jsonData() throws -> Data {
+        return try newJSONEncoder().encode(self)
+    }
+
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
+    }
+}
+
+// MARK: - The10000109
+struct The10000109: Codable {
+    let element: String
+    let consts: [String]
+    let skillOrder: [Int]
+    let skills: [String: String]
+    let proudMap: [String: Int]
+    let nameTextMapHash: Int
+    let sideIconName, qualityType, weaponType: String
+
+    enum CodingKeys: String, CodingKey {
+        case element = "Element"
+        case consts = "Consts"
+        case skillOrder = "SkillOrder"
+        case skills = "Skills"
+        case proudMap = "ProudMap"
+        case nameTextMapHash = "NameTextMapHash"
+        case sideIconName = "SideIconName"
+        case qualityType = "QualityType"
+        case weaponType = "WeaponType"
+    }
+}
+
+// MARK: The10000109 convenience initializers and mutators
+
+extension The10000109 {
+    init(data: Data) throws {
+        self = try newJSONDecoder().decode(The10000109.self, from: data)
+    }
+
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+        }
+        try self.init(data: data)
+    }
+
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+
+    func with(
+        element: String? = nil,
+        consts: [String]? = nil,
+        skillOrder: [Int]? = nil,
+        skills: [String: String]? = nil,
+        proudMap: [String: Int]? = nil,
+        nameTextMapHash: Int? = nil,
+        sideIconName: String? = nil,
+        qualityType: String? = nil,
+        weaponType: String? = nil
+    ) -> The10000109 {
+        return The10000109(
             element: element ?? self.element,
             consts: consts ?? self.consts,
             skillOrder: skillOrder ?? self.skillOrder,
