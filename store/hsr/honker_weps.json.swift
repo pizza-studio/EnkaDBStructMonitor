@@ -74,7 +74,7 @@ enum AvatarBaseType: String, Codable {
 
 // MARK: - EquipmentName
 struct EquipmentName: Codable {
-    let hash: Int
+    let hash: String
 
     enum CodingKeys: String, CodingKey {
         case hash = "Hash"
@@ -100,7 +100,7 @@ extension EquipmentName {
     }
 
     func with(
-        hash: Int? = nil
+        hash: String? = nil
     ) -> EquipmentName {
         return EquipmentName(
             hash: hash ?? self.hash
