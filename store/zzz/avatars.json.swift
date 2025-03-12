@@ -12,8 +12,10 @@ struct AvatarsJSONValue: Codable {
     let professionType: ProfessionType
     let elementTypes: [String]
     let image, circleIcon: String
-    let colors: Colors
+    let weaponID: Int
     let skins: [String: Skin]
+    let colors: Colors
+    let highlightProps: [Int]
     let baseProps, growthProps: [String: Int]
     let promotionProps, coreEnhancementProps: [[String: Int]]
 
@@ -24,8 +26,10 @@ struct AvatarsJSONValue: Codable {
         case elementTypes = "ElementTypes"
         case image = "Image"
         case circleIcon = "CircleIcon"
-        case colors = "Colors"
+        case weaponID = "WeaponId"
         case skins = "Skins"
+        case colors = "Colors"
+        case highlightProps = "HighlightProps"
         case baseProps = "BaseProps"
         case growthProps = "GrowthProps"
         case promotionProps = "PromotionProps"
@@ -58,8 +62,10 @@ extension AvatarsJSONValue {
         elementTypes: [String]? = nil,
         image: String? = nil,
         circleIcon: String? = nil,
-        colors: Colors? = nil,
+        weaponID: Int? = nil,
         skins: [String: Skin]? = nil,
+        colors: Colors? = nil,
+        highlightProps: [Int]? = nil,
         baseProps: [String: Int]? = nil,
         growthProps: [String: Int]? = nil,
         promotionProps: [[String: Int]]? = nil,
@@ -72,8 +78,10 @@ extension AvatarsJSONValue {
             elementTypes: elementTypes ?? self.elementTypes,
             image: image ?? self.image,
             circleIcon: circleIcon ?? self.circleIcon,
-            colors: colors ?? self.colors,
+            weaponID: weaponID ?? self.weaponID,
             skins: skins ?? self.skins,
+            colors: colors ?? self.colors,
+            highlightProps: highlightProps ?? self.highlightProps,
             baseProps: baseProps ?? self.baseProps,
             growthProps: growthProps ?? self.growthProps,
             promotionProps: promotionProps ?? self.promotionProps,
