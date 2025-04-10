@@ -7,15 +7,15 @@ import Foundation
 
 // MARK: - HsrJSON
 struct HsrJSON: Codable {
-    let en, ru, vi, th: [String: String]
-    let pt, ko, ja, id: [String: String]
-    let fr, es, de, zhTw: [String: String]
-    let zhCN: [String: String]
+    let de, en, es, fr: [String: String]
+    let id, ja, ko, pt: [String: String]
+    let ru, th, vi, zhCN: [String: String]
+    let zhTw: [String: String]
 
     enum CodingKeys: String, CodingKey {
-        case en, ru, vi, th, pt, ko, ja, id, fr, es, de
-        case zhTw = "zh-tw"
+        case de, en, es, fr, id, ja, ko, pt, ru, th, vi
         case zhCN = "zh-cn"
+        case zhTw = "zh-tw"
     }
 }
 
@@ -38,34 +38,34 @@ extension HsrJSON {
     }
 
     func with(
-        en: [String: String]? = nil,
-        ru: [String: String]? = nil,
-        vi: [String: String]? = nil,
-        th: [String: String]? = nil,
-        pt: [String: String]? = nil,
-        ko: [String: String]? = nil,
-        ja: [String: String]? = nil,
-        id: [String: String]? = nil,
-        fr: [String: String]? = nil,
-        es: [String: String]? = nil,
         de: [String: String]? = nil,
-        zhTw: [String: String]? = nil,
-        zhCN: [String: String]? = nil
+        en: [String: String]? = nil,
+        es: [String: String]? = nil,
+        fr: [String: String]? = nil,
+        id: [String: String]? = nil,
+        ja: [String: String]? = nil,
+        ko: [String: String]? = nil,
+        pt: [String: String]? = nil,
+        ru: [String: String]? = nil,
+        th: [String: String]? = nil,
+        vi: [String: String]? = nil,
+        zhCN: [String: String]? = nil,
+        zhTw: [String: String]? = nil
     ) -> HsrJSON {
         return HsrJSON(
-            en: en ?? self.en,
-            ru: ru ?? self.ru,
-            vi: vi ?? self.vi,
-            th: th ?? self.th,
-            pt: pt ?? self.pt,
-            ko: ko ?? self.ko,
-            ja: ja ?? self.ja,
-            id: id ?? self.id,
-            fr: fr ?? self.fr,
-            es: es ?? self.es,
             de: de ?? self.de,
-            zhTw: zhTw ?? self.zhTw,
-            zhCN: zhCN ?? self.zhCN
+            en: en ?? self.en,
+            es: es ?? self.es,
+            fr: fr ?? self.fr,
+            id: id ?? self.id,
+            ja: ja ?? self.ja,
+            ko: ko ?? self.ko,
+            pt: pt ?? self.pt,
+            ru: ru ?? self.ru,
+            th: th ?? self.th,
+            vi: vi ?? self.vi,
+            zhCN: zhCN ?? self.zhCN,
+            zhTw: zhTw ?? self.zhTw
         )
     }
 

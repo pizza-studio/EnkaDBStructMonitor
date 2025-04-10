@@ -7,23 +7,26 @@ import Foundation
 
 // MARK: - HonkerCharactersJSONValue
 struct HonkerCharactersJSONValue: Codable {
-    let avatarName, avatarFullName: AvatarName
-    let rarity: Int
-    let element: Element
+    let actionAvatarHeadIconPath: String
     let avatarBaseType: AvatarBaseType
-    let avatarSideIconPath, actionAvatarHeadIconPath, avatarCutinFrontImgPath: String
-    let rankIDList, skillList: [Int]
+    let avatarCutinFrontImgPath: String
+    let avatarFullName, avatarName: AvatarName
+    let avatarSideIconPath: String
+    let element: Element
+    let rankIDList: [Int]
+    let rarity: Int
+    let skillList: [Int]
 
     enum CodingKeys: String, CodingKey {
-        case avatarName = "AvatarName"
-        case avatarFullName = "AvatarFullName"
-        case rarity = "Rarity"
-        case element = "Element"
-        case avatarBaseType = "AvatarBaseType"
-        case avatarSideIconPath = "AvatarSideIconPath"
         case actionAvatarHeadIconPath = "ActionAvatarHeadIconPath"
+        case avatarBaseType = "AvatarBaseType"
         case avatarCutinFrontImgPath = "AvatarCutinFrontImgPath"
+        case avatarFullName = "AvatarFullName"
+        case avatarName = "AvatarName"
+        case avatarSideIconPath = "AvatarSideIconPath"
+        case element = "Element"
         case rankIDList = "RankIDList"
+        case rarity = "Rarity"
         case skillList = "SkillList"
     }
 }
@@ -47,27 +50,27 @@ extension HonkerCharactersJSONValue {
     }
 
     func with(
-        avatarName: AvatarName? = nil,
-        avatarFullName: AvatarName? = nil,
-        rarity: Int? = nil,
-        element: Element? = nil,
-        avatarBaseType: AvatarBaseType? = nil,
-        avatarSideIconPath: String? = nil,
         actionAvatarHeadIconPath: String? = nil,
+        avatarBaseType: AvatarBaseType? = nil,
         avatarCutinFrontImgPath: String? = nil,
+        avatarFullName: AvatarName? = nil,
+        avatarName: AvatarName? = nil,
+        avatarSideIconPath: String? = nil,
+        element: Element? = nil,
         rankIDList: [Int]? = nil,
+        rarity: Int? = nil,
         skillList: [Int]? = nil
     ) -> HonkerCharactersJSONValue {
         return HonkerCharactersJSONValue(
-            avatarName: avatarName ?? self.avatarName,
-            avatarFullName: avatarFullName ?? self.avatarFullName,
-            rarity: rarity ?? self.rarity,
-            element: element ?? self.element,
-            avatarBaseType: avatarBaseType ?? self.avatarBaseType,
-            avatarSideIconPath: avatarSideIconPath ?? self.avatarSideIconPath,
             actionAvatarHeadIconPath: actionAvatarHeadIconPath ?? self.actionAvatarHeadIconPath,
+            avatarBaseType: avatarBaseType ?? self.avatarBaseType,
             avatarCutinFrontImgPath: avatarCutinFrontImgPath ?? self.avatarCutinFrontImgPath,
+            avatarFullName: avatarFullName ?? self.avatarFullName,
+            avatarName: avatarName ?? self.avatarName,
+            avatarSideIconPath: avatarSideIconPath ?? self.avatarSideIconPath,
+            element: element ?? self.element,
             rankIDList: rankIDList ?? self.rankIDList,
+            rarity: rarity ?? self.rarity,
             skillList: skillList ?? self.skillList
         )
     }
