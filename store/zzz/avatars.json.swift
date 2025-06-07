@@ -9,7 +9,7 @@ import Foundation
 struct AvatarsJSONValue: Codable {
     let name: String
     let rarity: Int
-    let professionType: ProfessionType
+    let professionType: String
     let elementTypes: [String]
     let image, circleIcon: String
     let weaponID: Int
@@ -58,7 +58,7 @@ extension AvatarsJSONValue {
     func with(
         name: String? = nil,
         rarity: Int? = nil,
-        professionType: ProfessionType? = nil,
+        professionType: String? = nil,
         elementTypes: [String]? = nil,
         image: String? = nil,
         circleIcon: String? = nil,
@@ -143,14 +143,6 @@ extension Colors {
     func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
         return String(data: try self.jsonData(), encoding: encoding)
     }
-}
-
-enum ProfessionType: String, Codable {
-    case anomaly = "Anomaly"
-    case attack = "Attack"
-    case defense = "Defense"
-    case stun = "Stun"
-    case support = "Support"
 }
 
 // MARK: - Skin

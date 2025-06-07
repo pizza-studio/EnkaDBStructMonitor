@@ -10,11 +10,13 @@ struct TitlesJSONValue: Codable {
     let titleText: String
     let colorA: ColorA
     let colorB: ColorB
+    let variants: [String: String]
 
     enum CodingKeys: String, CodingKey {
         case titleText = "TitleText"
         case colorA = "ColorA"
         case colorB = "ColorB"
+        case variants = "Variants"
     }
 }
 
@@ -39,12 +41,14 @@ extension TitlesJSONValue {
     func with(
         titleText: String? = nil,
         colorA: ColorA? = nil,
-        colorB: ColorB? = nil
+        colorB: ColorB? = nil,
+        variants: [String: String]? = nil
     ) -> TitlesJSONValue {
         return TitlesJSONValue(
             titleText: titleText ?? self.titleText,
             colorA: colorA ?? self.colorA,
-            colorB: colorB ?? self.colorB
+            colorB: colorB ?? self.colorB,
+            variants: variants ?? self.variants
         )
     }
 
@@ -63,6 +67,7 @@ enum ColorA: String, Codable {
     case fab700 = "fab700"
     case ffffff = "FFFFFF"
     case the00Cefb = "00cefb"
+    case the9Bf00B = "9bf00b"
 }
 
 enum ColorB: String, Codable {
@@ -70,6 +75,7 @@ enum ColorB: String, Codable {
     case fe357B = "fe357b"
     case fe6300 = "fe6300"
     case the0263E5 = "0263e5"
+    case the107C10 = "107c10"
     case the8Ea3AE = "8ea3ae"
 }
 

@@ -119,6 +119,7 @@ enum ProfessionType: String, Codable {
     case anomaly = "Anomaly"
     case attack = "Attack"
     case defense = "Defense"
+    case rupture = "Rupture"
     case stun = "Stun"
     case support = "Support"
 }
