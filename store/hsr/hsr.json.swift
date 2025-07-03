@@ -7,15 +7,15 @@ import Foundation
 
 // MARK: - HsrJSON
 struct HsrJSON: Codable {
-    let de, en, es, fr: [String: String]
-    let id, ja, ko, pt: [String: String]
-    let ru, th, vi, zhCN: [String: String]
-    let zhTw: [String: String]
+    let zhCN, zhTw, de, en: [String: String]
+    let es, fr, id, ja: [String: String]
+    let ko, pt, ru, th: [String: String]
+    let vi: [String: String]
 
     enum CodingKeys: String, CodingKey {
-        case de, en, es, fr, id, ja, ko, pt, ru, th, vi
         case zhCN = "zh-cn"
         case zhTw = "zh-tw"
+        case de, en, es, fr, id, ja, ko, pt, ru, th, vi
     }
 }
 
@@ -38,6 +38,8 @@ extension HsrJSON {
     }
 
     func with(
+        zhCN: [String: String]? = nil,
+        zhTw: [String: String]? = nil,
         de: [String: String]? = nil,
         en: [String: String]? = nil,
         es: [String: String]? = nil,
@@ -48,11 +50,11 @@ extension HsrJSON {
         pt: [String: String]? = nil,
         ru: [String: String]? = nil,
         th: [String: String]? = nil,
-        vi: [String: String]? = nil,
-        zhCN: [String: String]? = nil,
-        zhTw: [String: String]? = nil
+        vi: [String: String]? = nil
     ) -> HsrJSON {
         return HsrJSON(
+            zhCN: zhCN ?? self.zhCN,
+            zhTw: zhTw ?? self.zhTw,
             de: de ?? self.de,
             en: en ?? self.en,
             es: es ?? self.es,
@@ -63,9 +65,7 @@ extension HsrJSON {
             pt: pt ?? self.pt,
             ru: ru ?? self.ru,
             th: th ?? self.th,
-            vi: vi ?? self.vi,
-            zhCN: zhCN ?? self.zhCN,
-            zhTw: zhTw ?? self.zhTw
+            vi: vi ?? self.vi
         )
     }
 
