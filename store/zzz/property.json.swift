@@ -54,6 +54,7 @@ extension PropertyJSONValue {
 }
 
 enum Format: String, Codable {
+    case empty = ""
     case fluffy00 = "{0:0.##}"
     case format00 = "{0:0.#%}"
     case purple00 = "{0:0.#}"
