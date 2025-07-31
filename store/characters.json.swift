@@ -109,8 +109,10 @@ struct CharactersJSON: Codable {
     let the10000113: The10000113
     let the10000114: The10000114
     let the10000115: The10000115
+    let the10000116: The10000116_Class
     let the10000901: The10000023_Class
     let the10000902: The10000046_Class
+    let the10000903: The10000116_Class
     let the11000046: The10000015
     let the10000005502: The10000005502
     let the10000005503: The10000005503
@@ -230,8 +232,10 @@ struct CharactersJSON: Codable {
         case the10000113 = "10000113"
         case the10000114 = "10000114"
         case the10000115 = "10000115"
+        case the10000116 = "10000116"
         case the10000901 = "10000901"
         case the10000902 = "10000902"
+        case the10000903 = "10000903"
         case the11000046 = "11000046"
         case the10000005502 = "10000005-502"
         case the10000005503 = "10000005-503"
@@ -371,8 +375,10 @@ extension CharactersJSON {
         the10000113: The10000113? = nil,
         the10000114: The10000114? = nil,
         the10000115: The10000115? = nil,
+        the10000116: The10000116_Class? = nil,
         the10000901: The10000023_Class? = nil,
         the10000902: The10000046_Class? = nil,
+        the10000903: The10000116_Class? = nil,
         the11000046: The10000015? = nil,
         the10000005502: The10000005502? = nil,
         the10000005503: The10000005503? = nil,
@@ -492,8 +498,10 @@ extension CharactersJSON {
             the10000113: the10000113 ?? self.the10000113,
             the10000114: the10000114 ?? self.the10000114,
             the10000115: the10000115 ?? self.the10000115,
+            the10000116: the10000116 ?? self.the10000116,
             the10000901: the10000901 ?? self.the10000901,
             the10000902: the10000902 ?? self.the10000902,
+            the10000903: the10000903 ?? self.the10000903,
             the11000046: the11000046 ?? self.the11000046,
             the10000005502: the10000005502 ?? self.the10000005502,
             the10000005503: the10000005503 ?? self.the10000005503,
@@ -3402,6 +3410,7 @@ struct The10000032: Codable {
     let proudMap: [String: Int]
     let nameTextMapHash: Int
     let sideIconName, qualityType, weaponType: String
+    let costumes: The10000032_Costumes
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -3413,6 +3422,7 @@ struct The10000032: Codable {
         case sideIconName = "SideIconName"
         case qualityType = "QualityType"
         case weaponType = "WeaponType"
+        case costumes = "Costumes"
     }
 }
 
@@ -3443,7 +3453,8 @@ extension The10000032 {
         nameTextMapHash: Int? = nil,
         sideIconName: String? = nil,
         qualityType: String? = nil,
-        weaponType: String? = nil
+        weaponType: String? = nil,
+        costumes: The10000032_Costumes? = nil
     ) -> The10000032 {
         return The10000032(
             element: element ?? self.element,
@@ -3454,7 +3465,52 @@ extension The10000032 {
             nameTextMapHash: nameTextMapHash ?? self.nameTextMapHash,
             sideIconName: sideIconName ?? self.sideIconName,
             qualityType: qualityType ?? self.qualityType,
-            weaponType: weaponType ?? self.weaponType
+            weaponType: weaponType ?? self.weaponType,
+            costumes: costumes ?? self.costumes
+        )
+    }
+
+    func jsonData() throws -> Data {
+        return try newJSONEncoder().encode(self)
+    }
+
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
+    }
+}
+
+// MARK: - The10000032_Costumes
+struct The10000032_Costumes: Codable {
+    let the203201: The200201
+
+    enum CodingKeys: String, CodingKey {
+        case the203201 = "203201"
+    }
+}
+
+// MARK: The10000032_Costumes convenience initializers and mutators
+
+extension The10000032_Costumes {
+    init(data: Data) throws {
+        self = try newJSONDecoder().decode(The10000032_Costumes.self, from: data)
+    }
+
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+        }
+        try self.init(data: data)
+    }
+
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+
+    func with(
+        the203201: The200201? = nil
+    ) -> The10000032_Costumes {
+        return The10000032_Costumes(
+            the203201: the203201 ?? self.the203201
         )
     }
 
@@ -5640,6 +5696,7 @@ struct The10000060: Codable {
     let proudMap: [String: Int]
     let nameTextMapHash: Int
     let sideIconName, qualityType, weaponType: String
+    let costumes: The10000060_Costumes
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5651,6 +5708,7 @@ struct The10000060: Codable {
         case sideIconName = "SideIconName"
         case qualityType = "QualityType"
         case weaponType = "WeaponType"
+        case costumes = "Costumes"
     }
 }
 
@@ -5681,7 +5739,8 @@ extension The10000060 {
         nameTextMapHash: Int? = nil,
         sideIconName: String? = nil,
         qualityType: String? = nil,
-        weaponType: String? = nil
+        weaponType: String? = nil,
+        costumes: The10000060_Costumes? = nil
     ) -> The10000060 {
         return The10000060(
             element: element ?? self.element,
@@ -5692,7 +5751,52 @@ extension The10000060 {
             nameTextMapHash: nameTextMapHash ?? self.nameTextMapHash,
             sideIconName: sideIconName ?? self.sideIconName,
             qualityType: qualityType ?? self.qualityType,
-            weaponType: weaponType ?? self.weaponType
+            weaponType: weaponType ?? self.weaponType,
+            costumes: costumes ?? self.costumes
+        )
+    }
+
+    func jsonData() throws -> Data {
+        return try newJSONEncoder().encode(self)
+    }
+
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
+    }
+}
+
+// MARK: - The10000060_Costumes
+struct The10000060_Costumes: Codable {
+    let the206001: The200201
+
+    enum CodingKeys: String, CodingKey {
+        case the206001 = "206001"
+    }
+}
+
+// MARK: The10000060_Costumes convenience initializers and mutators
+
+extension The10000060_Costumes {
+    init(data: Data) throws {
+        self = try newJSONDecoder().decode(The10000060_Costumes.self, from: data)
+    }
+
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+        }
+        try self.init(data: data)
+    }
+
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+
+    func with(
+        the206001: The200201? = nil
+    ) -> The10000060_Costumes {
+        return The10000060_Costumes(
+            the206001: the206001 ?? self.the206001
         )
     }
 
@@ -9898,6 +10002,80 @@ extension The10000115 {
         weaponType: String? = nil
     ) -> The10000115 {
         return The10000115(
+            element: element ?? self.element,
+            consts: consts ?? self.consts,
+            skillOrder: skillOrder ?? self.skillOrder,
+            skills: skills ?? self.skills,
+            proudMap: proudMap ?? self.proudMap,
+            nameTextMapHash: nameTextMapHash ?? self.nameTextMapHash,
+            sideIconName: sideIconName ?? self.sideIconName,
+            qualityType: qualityType ?? self.qualityType,
+            weaponType: weaponType ?? self.weaponType
+        )
+    }
+
+    func jsonData() throws -> Data {
+        return try newJSONEncoder().encode(self)
+    }
+
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
+    }
+}
+
+// MARK: - The10000116_Class
+struct The10000116_Class: Codable {
+    let element: String
+    let consts: [String]
+    let skillOrder: [Int]
+    let skills: [String: String]
+    let proudMap: [String: Int]
+    let nameTextMapHash: Int
+    let sideIconName, qualityType, weaponType: String
+
+    enum CodingKeys: String, CodingKey {
+        case element = "Element"
+        case consts = "Consts"
+        case skillOrder = "SkillOrder"
+        case skills = "Skills"
+        case proudMap = "ProudMap"
+        case nameTextMapHash = "NameTextMapHash"
+        case sideIconName = "SideIconName"
+        case qualityType = "QualityType"
+        case weaponType = "WeaponType"
+    }
+}
+
+// MARK: The10000116_Class convenience initializers and mutators
+
+extension The10000116_Class {
+    init(data: Data) throws {
+        self = try newJSONDecoder().decode(The10000116_Class.self, from: data)
+    }
+
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+        }
+        try self.init(data: data)
+    }
+
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+
+    func with(
+        element: String? = nil,
+        consts: [String]? = nil,
+        skillOrder: [Int]? = nil,
+        skills: [String: String]? = nil,
+        proudMap: [String: Int]? = nil,
+        nameTextMapHash: Int? = nil,
+        sideIconName: String? = nil,
+        qualityType: String? = nil,
+        weaponType: String? = nil
+    ) -> The10000116_Class {
+        return The10000116_Class(
             element: element ?? self.element,
             consts: consts ?? self.consts,
             skillOrder: skillOrder ?? self.skillOrder,
