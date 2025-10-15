@@ -59,6 +59,9 @@ extension MedalsJSONValue {
 enum TipNum: String, Codable {
     case medalTipsNum1 = "MedalTipsNum1"
     case medalTipsNum2 = "MedalTipsNum2"
+    case medalTipsNum3 = "MedalTipsNum3"
+    case medalTipsNum4 = "MedalTipsNum4"
+    case medalTipsNum5 = "MedalTipsNum5"
 }
 
 typealias MedalsJSON = [String: MedalsJSONValue]
