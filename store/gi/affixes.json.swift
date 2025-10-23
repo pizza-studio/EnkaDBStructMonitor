@@ -1,29 +1,30 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let medalsJSON = try MedalsJSON(json)
+//   let affixesJSON = try AffixesJSON(json)
 
 import Foundation
 
-// MARK: - MedalsJSONValue
-struct MedalsJSONValue: Codable {
-    let name, icon: String
-    let tipNum: TipNum
-    let prefixIcon: PrefixIcon
+// MARK: - AffixesJSONValue
+struct AffixesJSONValue: Codable {
+    let propType: Int
+    let efficiency: Double
+    let position: Int
+    let value: Double
 
     enum CodingKeys: String, CodingKey {
-        case name = "Name"
-        case icon = "Icon"
-        case tipNum = "TipNum"
-        case prefixIcon = "PrefixIcon"
+        case propType = "PropType"
+        case efficiency = "Efficiency"
+        case position = "Position"
+        case value = "Value"
     }
 }
 
-// MARK: MedalsJSONValue convenience initializers and mutators
+// MARK: AffixesJSONValue convenience initializers and mutators
 
-extension MedalsJSONValue {
+extension AffixesJSONValue {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(MedalsJSONValue.self, from: data)
+        self = try newJSONDecoder().decode(AffixesJSONValue.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -38,16 +39,16 @@ extension MedalsJSONValue {
     }
 
     func with(
-        name: String? = nil,
-        icon: String? = nil,
-        tipNum: TipNum? = nil,
-        prefixIcon: PrefixIcon? = nil
-    ) -> MedalsJSONValue {
-        return MedalsJSONValue(
-            name: name ?? self.name,
-            icon: icon ?? self.icon,
-            tipNum: tipNum ?? self.tipNum,
-            prefixIcon: prefixIcon ?? self.prefixIcon
+        propType: Int? = nil,
+        efficiency: Double? = nil,
+        position: Int? = nil,
+        value: Double? = nil
+    ) -> AffixesJSONValue {
+        return AffixesJSONValue(
+            propType: propType ?? self.propType,
+            efficiency: efficiency ?? self.efficiency,
+            position: position ?? self.position,
+            value: value ?? self.value
         )
     }
 
@@ -60,24 +61,11 @@ extension MedalsJSONValue {
     }
 }
 
-enum PrefixIcon: String, Codable {
-    case empty = ""
-    case uiZzzCrownPNG = "/ui/zzz/Crown.png"
-}
+typealias AffixesJSON = [String: AffixesJSONValue]
 
-enum TipNum: String, Codable {
-    case medalTipsNum1 = "MedalTipsNum1"
-    case medalTipsNum2 = "MedalTipsNum2"
-    case medalTipsNum3 = "MedalTipsNum3"
-    case medalTipsNum4 = "MedalTipsNum4"
-    case medalTipsNum5 = "MedalTipsNum5"
-}
-
-typealias MedalsJSON = [String: MedalsJSONValue]
-
-extension Dictionary where Key == String, Value == MedalsJSONValue {
+extension Dictionary where Key == String, Value == AffixesJSONValue {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(MedalsJSON.self, from: data)
+        self = try newJSONDecoder().decode(AffixesJSON.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {

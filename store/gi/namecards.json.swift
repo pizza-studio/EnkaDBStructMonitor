@@ -1,29 +1,24 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let medalsJSON = try MedalsJSON(json)
+//   let namecardsJSON = try NamecardsJSON(json)
 
 import Foundation
 
-// MARK: - MedalsJSONValue
-struct MedalsJSONValue: Codable {
-    let name, icon: String
-    let tipNum: TipNum
-    let prefixIcon: PrefixIcon
+// MARK: - NamecardsJSONValue
+struct NamecardsJSONValue: Codable {
+    let icon: String
 
     enum CodingKeys: String, CodingKey {
-        case name = "Name"
         case icon = "Icon"
-        case tipNum = "TipNum"
-        case prefixIcon = "PrefixIcon"
     }
 }
 
-// MARK: MedalsJSONValue convenience initializers and mutators
+// MARK: NamecardsJSONValue convenience initializers and mutators
 
-extension MedalsJSONValue {
+extension NamecardsJSONValue {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(MedalsJSONValue.self, from: data)
+        self = try newJSONDecoder().decode(NamecardsJSONValue.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -38,16 +33,10 @@ extension MedalsJSONValue {
     }
 
     func with(
-        name: String? = nil,
-        icon: String? = nil,
-        tipNum: TipNum? = nil,
-        prefixIcon: PrefixIcon? = nil
-    ) -> MedalsJSONValue {
-        return MedalsJSONValue(
-            name: name ?? self.name,
-            icon: icon ?? self.icon,
-            tipNum: tipNum ?? self.tipNum,
-            prefixIcon: prefixIcon ?? self.prefixIcon
+        icon: String? = nil
+    ) -> NamecardsJSONValue {
+        return NamecardsJSONValue(
+            icon: icon ?? self.icon
         )
     }
 
@@ -60,24 +49,11 @@ extension MedalsJSONValue {
     }
 }
 
-enum PrefixIcon: String, Codable {
-    case empty = ""
-    case uiZzzCrownPNG = "/ui/zzz/Crown.png"
-}
+typealias NamecardsJSON = [String: NamecardsJSONValue]
 
-enum TipNum: String, Codable {
-    case medalTipsNum1 = "MedalTipsNum1"
-    case medalTipsNum2 = "MedalTipsNum2"
-    case medalTipsNum3 = "MedalTipsNum3"
-    case medalTipsNum4 = "MedalTipsNum4"
-    case medalTipsNum5 = "MedalTipsNum5"
-}
-
-typealias MedalsJSON = [String: MedalsJSONValue]
-
-extension Dictionary where Key == String, Value == MedalsJSONValue {
+extension Dictionary where Key == String, Value == NamecardsJSONValue {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(MedalsJSON.self, from: data)
+        self = try newJSONDecoder().decode(NamecardsJSON.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
