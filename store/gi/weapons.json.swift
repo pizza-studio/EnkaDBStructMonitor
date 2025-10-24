@@ -1,29 +1,37 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let medalsJSON = try MedalsJSON(json)
+//   let weaponsJSON = try WeaponsJSON(json)
 
 import Foundation
 
-// MARK: - MedalsJSONValue
-struct MedalsJSONValue: Codable {
-    let name, icon: String
-    let tipNum: TipNum
-    let prefixIcon: PrefixIcon
+// MARK: - WeaponsJSONValue
+struct WeaponsJSONValue: Codable {
+    let rarity, weaponType: Int
+    let icon, awakenIcon: String
+    let nameTextMapHash: Int
+    let baseProps, propGrowCurves: [String: Double]
+    let basePromote: [Double]
+    let refineProps: [String: [String: Double]]
 
     enum CodingKeys: String, CodingKey {
-        case name = "Name"
+        case rarity = "Rarity"
+        case weaponType = "WeaponType"
         case icon = "Icon"
-        case tipNum = "TipNum"
-        case prefixIcon = "PrefixIcon"
+        case awakenIcon = "AwakenIcon"
+        case nameTextMapHash = "NameTextMapHash"
+        case baseProps = "BaseProps"
+        case propGrowCurves = "PropGrowCurves"
+        case basePromote = "BasePromote"
+        case refineProps = "RefineProps"
     }
 }
 
-// MARK: MedalsJSONValue convenience initializers and mutators
+// MARK: WeaponsJSONValue convenience initializers and mutators
 
-extension MedalsJSONValue {
+extension WeaponsJSONValue {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(MedalsJSONValue.self, from: data)
+        self = try newJSONDecoder().decode(WeaponsJSONValue.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -38,16 +46,26 @@ extension MedalsJSONValue {
     }
 
     func with(
-        name: String? = nil,
+        rarity: Int? = nil,
+        weaponType: Int? = nil,
         icon: String? = nil,
-        tipNum: TipNum? = nil,
-        prefixIcon: PrefixIcon? = nil
-    ) -> MedalsJSONValue {
-        return MedalsJSONValue(
-            name: name ?? self.name,
+        awakenIcon: String? = nil,
+        nameTextMapHash: Int? = nil,
+        baseProps: [String: Double]? = nil,
+        propGrowCurves: [String: Double]? = nil,
+        basePromote: [Double]? = nil,
+        refineProps: [String: [String: Double]]? = nil
+    ) -> WeaponsJSONValue {
+        return WeaponsJSONValue(
+            rarity: rarity ?? self.rarity,
+            weaponType: weaponType ?? self.weaponType,
             icon: icon ?? self.icon,
-            tipNum: tipNum ?? self.tipNum,
-            prefixIcon: prefixIcon ?? self.prefixIcon
+            awakenIcon: awakenIcon ?? self.awakenIcon,
+            nameTextMapHash: nameTextMapHash ?? self.nameTextMapHash,
+            baseProps: baseProps ?? self.baseProps,
+            propGrowCurves: propGrowCurves ?? self.propGrowCurves,
+            basePromote: basePromote ?? self.basePromote,
+            refineProps: refineProps ?? self.refineProps
         )
     }
 
@@ -60,24 +78,11 @@ extension MedalsJSONValue {
     }
 }
 
-enum PrefixIcon: String, Codable {
-    case empty = ""
-    case uiZzzCrownPNG = "/ui/zzz/Crown.png"
-}
+typealias WeaponsJSON = [String: WeaponsJSONValue]
 
-enum TipNum: String, Codable {
-    case medalTipsNum1 = "MedalTipsNum1"
-    case medalTipsNum2 = "MedalTipsNum2"
-    case medalTipsNum3 = "MedalTipsNum3"
-    case medalTipsNum4 = "MedalTipsNum4"
-    case medalTipsNum5 = "MedalTipsNum5"
-}
-
-typealias MedalsJSON = [String: MedalsJSONValue]
-
-extension Dictionary where Key == String, Value == MedalsJSONValue {
+extension Dictionary where Key == String, Value == WeaponsJSONValue {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(MedalsJSON.self, from: data)
+        self = try newJSONDecoder().decode(WeaponsJSON.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
