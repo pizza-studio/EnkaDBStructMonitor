@@ -1,55 +1,14 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let pfpsJSON = try PfpsJSON(json)
-
+//   let curvesJSON = try CurvesJSON(json)
 import Foundation
 
-// MARK: - PfpsJSONValue
-struct PfpsJSONValue: Codable {
-    let iconPath: String?
-}
+typealias CurvesJSON = [String: [Double]]
 
-// MARK: PfpsJSONValue convenience initializers and mutators
-
-extension PfpsJSONValue {
+extension Dictionary where Key == String, Value == [Double] {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(PfpsJSONValue.self, from: data)
-    }
-
-    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-
-    init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        iconPath: String?? = nil
-    ) -> PfpsJSONValue {
-        return PfpsJSONValue(
-            iconPath: iconPath ?? self.iconPath
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
-    }
-}
-
-typealias PfpsJSON = [String: PfpsJSONValue]
-
-extension Dictionary where Key == String, Value == PfpsJSONValue {
-    init(data: Data) throws {
-        self = try newJSONDecoder().decode(PfpsJSON.self, from: data)
+        self = try newJSONDecoder().decode(CurvesJSON.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
