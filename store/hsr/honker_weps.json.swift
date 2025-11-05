@@ -7,16 +7,16 @@ import Foundation
 
 // MARK: - HonkerWepsJSONValue
 struct HonkerWepsJSONValue: Codable {
+    let rarity: Int
     let avatarBaseType: AvatarBaseType
     let equipmentName: EquipmentName
     let imagePath: String
-    let rarity: Int
 
     enum CodingKeys: String, CodingKey {
+        case rarity = "Rarity"
         case avatarBaseType = "AvatarBaseType"
         case equipmentName = "EquipmentName"
         case imagePath = "ImagePath"
-        case rarity = "Rarity"
     }
 }
 
@@ -39,16 +39,16 @@ extension HonkerWepsJSONValue {
     }
 
     func with(
+        rarity: Int? = nil,
         avatarBaseType: AvatarBaseType? = nil,
         equipmentName: EquipmentName? = nil,
-        imagePath: String? = nil,
-        rarity: Int? = nil
+        imagePath: String? = nil
     ) -> HonkerWepsJSONValue {
         return HonkerWepsJSONValue(
+            rarity: rarity ?? self.rarity,
             avatarBaseType: avatarBaseType ?? self.avatarBaseType,
             equipmentName: equipmentName ?? self.equipmentName,
-            imagePath: imagePath ?? self.imagePath,
-            rarity: rarity ?? self.rarity
+            imagePath: imagePath ?? self.imagePath
         )
     }
 

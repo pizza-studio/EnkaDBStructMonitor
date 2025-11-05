@@ -100,7 +100,7 @@ extension AvatarsJSONValue {
 
 // MARK: - Colors
 struct Colors: Codable {
-    let accent, mindscape: String?
+    let accent, mindscape: String
 
     enum CodingKeys: String, CodingKey {
         case accent = "Accent"
@@ -127,8 +127,8 @@ extension Colors {
     }
 
     func with(
-        accent: String?? = nil,
-        mindscape: String?? = nil
+        accent: String? = nil,
+        mindscape: String? = nil
     ) -> Colors {
         return Colors(
             accent: accent ?? self.accent,

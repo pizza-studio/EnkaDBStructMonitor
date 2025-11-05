@@ -59,23 +59,23 @@ extension HonkerMetaJSON {
 
 // MARK: - Avatar
 struct Avatar: Codable {
-    let attackAdd, attackBase: Double
-    let baseAggro: Int
-    let criticalChance, criticalDamage, defenceAdd, defenceBase: Double
-    let hpAdd, hpBase: Double
+    let hpBase, hpAdd, attackBase, attackAdd: Double
+    let defenceBase, defenceAdd: Double
     let speedBase: Int
+    let criticalChance, criticalDamage: Double
+    let baseAggro: Int
 
     enum CodingKeys: String, CodingKey {
-        case attackAdd = "AttackAdd"
+        case hpBase = "HPBase"
+        case hpAdd = "HPAdd"
         case attackBase = "AttackBase"
-        case baseAggro = "BaseAggro"
+        case attackAdd = "AttackAdd"
+        case defenceBase = "DefenceBase"
+        case defenceAdd = "DefenceAdd"
+        case speedBase = "SpeedBase"
         case criticalChance = "CriticalChance"
         case criticalDamage = "CriticalDamage"
-        case defenceAdd = "DefenceAdd"
-        case defenceBase = "DefenceBase"
-        case hpAdd = "HPAdd"
-        case hpBase = "HPBase"
-        case speedBase = "SpeedBase"
+        case baseAggro = "BaseAggro"
     }
 }
 
@@ -98,28 +98,28 @@ extension Avatar {
     }
 
     func with(
-        attackAdd: Double? = nil,
+        hpBase: Double? = nil,
+        hpAdd: Double? = nil,
         attackBase: Double? = nil,
-        baseAggro: Int? = nil,
+        attackAdd: Double? = nil,
+        defenceBase: Double? = nil,
+        defenceAdd: Double? = nil,
+        speedBase: Int? = nil,
         criticalChance: Double? = nil,
         criticalDamage: Double? = nil,
-        defenceAdd: Double? = nil,
-        defenceBase: Double? = nil,
-        hpAdd: Double? = nil,
-        hpBase: Double? = nil,
-        speedBase: Int? = nil
+        baseAggro: Int? = nil
     ) -> Avatar {
         return Avatar(
-            attackAdd: attackAdd ?? self.attackAdd,
+            hpBase: hpBase ?? self.hpBase,
+            hpAdd: hpAdd ?? self.hpAdd,
             attackBase: attackBase ?? self.attackBase,
-            baseAggro: baseAggro ?? self.baseAggro,
+            attackAdd: attackAdd ?? self.attackAdd,
+            defenceBase: defenceBase ?? self.defenceBase,
+            defenceAdd: defenceAdd ?? self.defenceAdd,
+            speedBase: speedBase ?? self.speedBase,
             criticalChance: criticalChance ?? self.criticalChance,
             criticalDamage: criticalDamage ?? self.criticalDamage,
-            defenceAdd: defenceAdd ?? self.defenceAdd,
-            defenceBase: defenceBase ?? self.defenceBase,
-            hpAdd: hpAdd ?? self.hpAdd,
-            hpBase: hpBase ?? self.hpBase,
-            speedBase: speedBase ?? self.speedBase
+            baseAggro: baseAggro ?? self.baseAggro
         )
     }
 
@@ -134,16 +134,16 @@ extension Avatar {
 
 // MARK: - Equipment
 struct Equipment: Codable {
-    let attackAdd, baseAttack, baseDefence, baseHP: Double
-    let defenceAdd, hpAdd: Double
+    let baseHP, hpAdd, baseAttack, attackAdd: Double
+    let baseDefence, defenceAdd: Double
 
     enum CodingKeys: String, CodingKey {
-        case attackAdd = "AttackAdd"
-        case baseAttack = "BaseAttack"
-        case baseDefence = "BaseDefence"
         case baseHP = "BaseHP"
-        case defenceAdd = "DefenceAdd"
         case hpAdd = "HPAdd"
+        case baseAttack = "BaseAttack"
+        case attackAdd = "AttackAdd"
+        case baseDefence = "BaseDefence"
+        case defenceAdd = "DefenceAdd"
     }
 }
 
@@ -166,20 +166,20 @@ extension Equipment {
     }
 
     func with(
-        attackAdd: Double? = nil,
-        baseAttack: Double? = nil,
-        baseDefence: Double? = nil,
         baseHP: Double? = nil,
-        defenceAdd: Double? = nil,
-        hpAdd: Double? = nil
+        hpAdd: Double? = nil,
+        baseAttack: Double? = nil,
+        attackAdd: Double? = nil,
+        baseDefence: Double? = nil,
+        defenceAdd: Double? = nil
     ) -> Equipment {
         return Equipment(
-            attackAdd: attackAdd ?? self.attackAdd,
-            baseAttack: baseAttack ?? self.baseAttack,
-            baseDefence: baseDefence ?? self.baseDefence,
             baseHP: baseHP ?? self.baseHP,
-            defenceAdd: defenceAdd ?? self.defenceAdd,
-            hpAdd: hpAdd ?? self.hpAdd
+            hpAdd: hpAdd ?? self.hpAdd,
+            baseAttack: baseAttack ?? self.baseAttack,
+            attackAdd: attackAdd ?? self.attackAdd,
+            baseDefence: baseDefence ?? self.baseDefence,
+            defenceAdd: defenceAdd ?? self.defenceAdd
         )
     }
 
@@ -235,8 +235,8 @@ extension EquipmentSkill {
 // MARK: - Relic
 struct Relic: Codable {
     let mainAffix: [String: [String: MainAffix]]
-    let setSkill: [String: [String: EquipmentSkill]]
     let subAffix: [String: [String: SubAffix]]
+    let setSkill: [String: [String: EquipmentSkill]]
 }
 
 // MARK: Relic convenience initializers and mutators
@@ -259,13 +259,13 @@ extension Relic {
 
     func with(
         mainAffix: [String: [String: MainAffix]]? = nil,
-        setSkill: [String: [String: EquipmentSkill]]? = nil,
-        subAffix: [String: [String: SubAffix]]? = nil
+        subAffix: [String: [String: SubAffix]]? = nil,
+        setSkill: [String: [String: EquipmentSkill]]? = nil
     ) -> Relic {
         return Relic(
             mainAffix: mainAffix ?? self.mainAffix,
-            setSkill: setSkill ?? self.setSkill,
-            subAffix: subAffix ?? self.subAffix
+            subAffix: subAffix ?? self.subAffix,
+            setSkill: setSkill ?? self.setSkill
         )
     }
 
@@ -280,13 +280,13 @@ extension Relic {
 
 // MARK: - MainAffix
 struct MainAffix: Codable {
-    let baseValue, levelAdd: Double
     let property: String
+    let baseValue, levelAdd: Double
 
     enum CodingKeys: String, CodingKey {
+        case property = "Property"
         case baseValue = "BaseValue"
         case levelAdd = "LevelAdd"
-        case property = "Property"
     }
 }
 
@@ -309,14 +309,14 @@ extension MainAffix {
     }
 
     func with(
+        property: String? = nil,
         baseValue: Double? = nil,
-        levelAdd: Double? = nil,
-        property: String? = nil
+        levelAdd: Double? = nil
     ) -> MainAffix {
         return MainAffix(
+            property: property ?? self.property,
             baseValue: baseValue ?? self.baseValue,
-            levelAdd: levelAdd ?? self.levelAdd,
-            property: property ?? self.property
+            levelAdd: levelAdd ?? self.levelAdd
         )
     }
 
@@ -331,13 +331,12 @@ extension MainAffix {
 
 // MARK: - SubAffix
 struct SubAffix: Codable {
-    let baseValue: Double
     let property: String
-    let stepValue: Double
+    let baseValue, stepValue: Double
 
     enum CodingKeys: String, CodingKey {
-        case baseValue = "BaseValue"
         case property = "Property"
+        case baseValue = "BaseValue"
         case stepValue = "StepValue"
     }
 }
@@ -361,13 +360,13 @@ extension SubAffix {
     }
 
     func with(
-        baseValue: Double? = nil,
         property: String? = nil,
+        baseValue: Double? = nil,
         stepValue: Double? = nil
     ) -> SubAffix {
         return SubAffix(
-            baseValue: baseValue ?? self.baseValue,
             property: property ?? self.property,
+            baseValue: baseValue ?? self.baseValue,
             stepValue: stepValue ?? self.stepValue
         )
     }

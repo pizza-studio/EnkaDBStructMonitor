@@ -7,17 +7,19 @@ import Foundation
 
 // MARK: - HonkerRelicsJSONValue
 struct HonkerRelicsJSONValue: Codable {
-    let icon: String
-    let mainAffixGroup, rarity, setID, subAffixGroup: Int
+    let rarity: Int
     let type: TypeEnum
+    let mainAffixGroup, subAffixGroup: Int
+    let icon: String
+    let setID: Int
 
     enum CodingKeys: String, CodingKey {
-        case icon = "Icon"
-        case mainAffixGroup = "MainAffixGroup"
         case rarity = "Rarity"
-        case setID = "SetID"
-        case subAffixGroup = "SubAffixGroup"
         case type = "Type"
+        case mainAffixGroup = "MainAffixGroup"
+        case subAffixGroup = "SubAffixGroup"
+        case icon = "Icon"
+        case setID = "SetID"
     }
 }
 
@@ -40,20 +42,20 @@ extension HonkerRelicsJSONValue {
     }
 
     func with(
-        icon: String? = nil,
-        mainAffixGroup: Int? = nil,
         rarity: Int? = nil,
-        setID: Int? = nil,
+        type: TypeEnum? = nil,
+        mainAffixGroup: Int? = nil,
         subAffixGroup: Int? = nil,
-        type: TypeEnum? = nil
+        icon: String? = nil,
+        setID: Int? = nil
     ) -> HonkerRelicsJSONValue {
         return HonkerRelicsJSONValue(
-            icon: icon ?? self.icon,
-            mainAffixGroup: mainAffixGroup ?? self.mainAffixGroup,
             rarity: rarity ?? self.rarity,
-            setID: setID ?? self.setID,
+            type: type ?? self.type,
+            mainAffixGroup: mainAffixGroup ?? self.mainAffixGroup,
             subAffixGroup: subAffixGroup ?? self.subAffixGroup,
-            type: type ?? self.type
+            icon: icon ?? self.icon,
+            setID: setID ?? self.setID
         )
     }
 
