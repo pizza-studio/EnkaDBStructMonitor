@@ -70,6 +70,7 @@ extension WeaponsJSONValue {
 }
 
 enum AvatarBaseType: String, Codable {
+    case elation = "Elation"
     case knight = "Knight"
     case mage = "Mage"
     case memory = "Memory"

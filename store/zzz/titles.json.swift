@@ -55,7 +55,7 @@ extension TitlesJSON {
 
 // MARK: - TitleVariant
 struct TitleVariant: Codable {
-    let titleText: TitleText
+    let titleText: String
 
     enum CodingKeys: String, CodingKey {
         case titleText = "TitleText"
@@ -81,7 +81,7 @@ extension TitleVariant {
     }
 
     func with(
-        titleText: TitleText? = nil
+        titleText: String? = nil
     ) -> TitleVariant {
         return TitleVariant(
             titleText: titleText ?? self.titleText
@@ -95,10 +95,6 @@ extension TitleVariant {
     func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
         return String(data: try self.jsonData(), encoding: encoding)
     }
-}
-
-enum TitleText: String, Codable {
-    case titleText3809999 = "TitleText_3809999"
 }
 
 // MARK: - Title
