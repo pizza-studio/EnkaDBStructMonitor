@@ -72,7 +72,7 @@ struct AvatarsJSON: Codable {
     let the10000119, the10000120, the10000121, the10000122: The10000
     let the10000123: The10000123
     let the10000124, the10000125, the10000126, the10000127: The10000
-    let the10000128: The10000
+    let the10000128, the10000130: The10000
 
     enum CodingKeys: String, CodingKey {
         case the10000002 = "10000002"
@@ -216,6 +216,7 @@ struct AvatarsJSON: Codable {
         case the10000126 = "10000126"
         case the10000127 = "10000127"
         case the10000128 = "10000128"
+        case the10000130 = "10000130"
     }
 }
 
@@ -378,7 +379,8 @@ extension AvatarsJSON {
         the10000125: The10000? = nil,
         the10000126: The10000? = nil,
         the10000127: The10000? = nil,
-        the10000128: The10000? = nil
+        the10000128: The10000? = nil,
+        the10000130: The10000? = nil
     ) -> AvatarsJSON {
         return AvatarsJSON(
             the10000002: the10000002 ?? self.the10000002,
@@ -521,7 +523,8 @@ extension AvatarsJSON {
             the10000125: the10000125 ?? self.the10000125,
             the10000126: the10000126 ?? self.the10000126,
             the10000127: the10000127 ?? self.the10000127,
-            the10000128: the10000128 ?? self.the10000128
+            the10000128: the10000128 ?? self.the10000128,
+            the10000130: the10000130 ?? self.the10000130
         )
     }
 
