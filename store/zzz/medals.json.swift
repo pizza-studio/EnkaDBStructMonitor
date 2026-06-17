@@ -7,8 +7,7 @@ import Foundation
 
 // MARK: - MedalsJSONValue
 struct MedalsJSONValue: Codable {
-    let name, icon: String
-    let tipNum: TipNum
+    let name, icon, tipNum: String
     let prefixIcon: PrefixIcon
 
     enum CodingKeys: String, CodingKey {
@@ -40,7 +39,7 @@ extension MedalsJSONValue {
     func with(
         name: String? = nil,
         icon: String? = nil,
-        tipNum: TipNum? = nil,
+        tipNum: String? = nil,
         prefixIcon: PrefixIcon? = nil
     ) -> MedalsJSONValue {
         return MedalsJSONValue(
@@ -62,15 +61,8 @@ extension MedalsJSONValue {
 
 enum PrefixIcon: String, Codable {
     case empty = ""
+    case uiZzzCrown02PNG = "/ui/zzz/Crown02.png"
     case uiZzzCrownPNG = "/ui/zzz/Crown.png"
-}
-
-enum TipNum: String, Codable {
-    case medalTipsNum1 = "MedalTipsNum1"
-    case medalTipsNum2 = "MedalTipsNum2"
-    case medalTipsNum3 = "MedalTipsNum3"
-    case medalTipsNum4 = "MedalTipsNum4"
-    case medalTipsNum5 = "MedalTipsNum5"
 }
 
 typealias MedalsJSON = [String: MedalsJSONValue]
