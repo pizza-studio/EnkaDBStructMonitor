@@ -65,10 +65,12 @@ struct AvatarsJSON: Codable {
     let the10000108, the10000109, the10000110, the10000111: The10000
     let the10000112, the10000113, the10000114, the10000115: The10000
     let the10000116: The10000
-    let the1000011711702, the1000011711703, the1000011711704, the1000011711705: The1000011
-    let the1000011711706, the1000011711707, the1000011711708, the1000011811802: The1000011
-    let the1000011811803, the1000011811804, the1000011811805, the1000011811806: The1000011
-    let the1000011811807, the1000011811808: The1000011
+    let the1000011711701, the1000011711702: The1000011711701_Class
+    let the1000011711703, the1000011711704, the1000011711705, the1000011711706: The1000011711703_Class
+    let the1000011711707, the1000011711708: The1000011711703_Class
+    let the1000011811801, the1000011811802: The1000011711701_Class
+    let the1000011811803, the1000011811804, the1000011811805, the1000011811806: The1000011711703_Class
+    let the1000011811807, the1000011811808: The1000011711703_Class
     let the10000119, the10000120, the10000121, the10000122: The10000
     let the10000123: The10000123
     let the10000124, the10000125, the10000126, the10000127: The10000
@@ -193,6 +195,7 @@ struct AvatarsJSON: Codable {
         case the10000114 = "10000114"
         case the10000115 = "10000115"
         case the10000116 = "10000116"
+        case the1000011711701 = "10000117-11701"
         case the1000011711702 = "10000117-11702"
         case the1000011711703 = "10000117-11703"
         case the1000011711704 = "10000117-11704"
@@ -200,6 +203,7 @@ struct AvatarsJSON: Codable {
         case the1000011711706 = "10000117-11706"
         case the1000011711707 = "10000117-11707"
         case the1000011711708 = "10000117-11708"
+        case the1000011811801 = "10000118-11801"
         case the1000011811802 = "10000118-11802"
         case the1000011811803 = "10000118-11803"
         case the1000011811804 = "10000118-11804"
@@ -360,20 +364,22 @@ extension AvatarsJSON {
         the10000114: The10000? = nil,
         the10000115: The10000? = nil,
         the10000116: The10000? = nil,
-        the1000011711702: The1000011? = nil,
-        the1000011711703: The1000011? = nil,
-        the1000011711704: The1000011? = nil,
-        the1000011711705: The1000011? = nil,
-        the1000011711706: The1000011? = nil,
-        the1000011711707: The1000011? = nil,
-        the1000011711708: The1000011? = nil,
-        the1000011811802: The1000011? = nil,
-        the1000011811803: The1000011? = nil,
-        the1000011811804: The1000011? = nil,
-        the1000011811805: The1000011? = nil,
-        the1000011811806: The1000011? = nil,
-        the1000011811807: The1000011? = nil,
-        the1000011811808: The1000011? = nil,
+        the1000011711701: The1000011711701_Class? = nil,
+        the1000011711702: The1000011711701_Class? = nil,
+        the1000011711703: The1000011711703_Class? = nil,
+        the1000011711704: The1000011711703_Class? = nil,
+        the1000011711705: The1000011711703_Class? = nil,
+        the1000011711706: The1000011711703_Class? = nil,
+        the1000011711707: The1000011711703_Class? = nil,
+        the1000011711708: The1000011711703_Class? = nil,
+        the1000011811801: The1000011711701_Class? = nil,
+        the1000011811802: The1000011711701_Class? = nil,
+        the1000011811803: The1000011711703_Class? = nil,
+        the1000011811804: The1000011711703_Class? = nil,
+        the1000011811805: The1000011711703_Class? = nil,
+        the1000011811806: The1000011711703_Class? = nil,
+        the1000011811807: The1000011711703_Class? = nil,
+        the1000011811808: The1000011711703_Class? = nil,
         the10000119: The10000? = nil,
         the10000120: The10000? = nil,
         the10000121: The10000? = nil,
@@ -507,6 +513,7 @@ extension AvatarsJSON {
             the10000114: the10000114 ?? self.the10000114,
             the10000115: the10000115 ?? self.the10000115,
             the10000116: the10000116 ?? self.the10000116,
+            the1000011711701: the1000011711701 ?? self.the1000011711701,
             the1000011711702: the1000011711702 ?? self.the1000011711702,
             the1000011711703: the1000011711703 ?? self.the1000011711703,
             the1000011711704: the1000011711704 ?? self.the1000011711704,
@@ -514,6 +521,7 @@ extension AvatarsJSON {
             the1000011711706: the1000011711706 ?? self.the1000011711706,
             the1000011711707: the1000011711707 ?? self.the1000011711707,
             the1000011711708: the1000011711708 ?? self.the1000011711708,
+            the1000011811801: the1000011811801 ?? self.the1000011811801,
             the1000011811802: the1000011811802 ?? self.the1000011811802,
             the1000011811803: the1000011811803 ?? self.the1000011811803,
             the1000011811804: the1000011811804 ?? self.the1000011811804,
@@ -4223,8 +4231,98 @@ extension The10000087_Costumes {
     }
 }
 
-// MARK: - The1000011
-struct The1000011: Codable {
+// MARK: - The1000011711701_Class
+struct The1000011711701_Class: Codable {
+    let element: String
+    let consts: [Element]
+    let skillOrder: [Int]
+    let skills: [String: String]
+    let nameTextMapHash: Int
+    let proudMap: [String: Int]
+    let sideIconName, qualityType: String
+    let baseProps, propGrowCurves: [String: Double]
+    let promoteProps: [[String: Double]]
+    let weaponType: String?
+    let costumes: The10000020_Costumes?
+
+    enum CodingKeys: String, CodingKey {
+        case element = "Element"
+        case consts = "Consts"
+        case skillOrder = "SkillOrder"
+        case skills = "Skills"
+        case nameTextMapHash = "NameTextMapHash"
+        case proudMap = "ProudMap"
+        case sideIconName = "SideIconName"
+        case qualityType = "QualityType"
+        case baseProps = "BaseProps"
+        case propGrowCurves = "PropGrowCurves"
+        case promoteProps = "PromoteProps"
+        case weaponType = "WeaponType"
+        case costumes = "Costumes"
+    }
+}
+
+// MARK: The1000011711701_Class convenience initializers and mutators
+
+extension The1000011711701_Class {
+    init(data: Data) throws {
+        self = try newJSONDecoder().decode(The1000011711701_Class.self, from: data)
+    }
+
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+        }
+        try self.init(data: data)
+    }
+
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+
+    func with(
+        element: String? = nil,
+        consts: [Element]? = nil,
+        skillOrder: [Int]? = nil,
+        skills: [String: String]? = nil,
+        nameTextMapHash: Int? = nil,
+        proudMap: [String: Int]? = nil,
+        sideIconName: String? = nil,
+        qualityType: String? = nil,
+        baseProps: [String: Double]? = nil,
+        propGrowCurves: [String: Double]? = nil,
+        promoteProps: [[String: Double]]? = nil,
+        weaponType: String?? = nil,
+        costumes: The10000020_Costumes?? = nil
+    ) -> The1000011711701_Class {
+        return The1000011711701_Class(
+            element: element ?? self.element,
+            consts: consts ?? self.consts,
+            skillOrder: skillOrder ?? self.skillOrder,
+            skills: skills ?? self.skills,
+            nameTextMapHash: nameTextMapHash ?? self.nameTextMapHash,
+            proudMap: proudMap ?? self.proudMap,
+            sideIconName: sideIconName ?? self.sideIconName,
+            qualityType: qualityType ?? self.qualityType,
+            baseProps: baseProps ?? self.baseProps,
+            propGrowCurves: propGrowCurves ?? self.propGrowCurves,
+            promoteProps: promoteProps ?? self.promoteProps,
+            weaponType: weaponType ?? self.weaponType,
+            costumes: costumes ?? self.costumes
+        )
+    }
+
+    func jsonData() throws -> Data {
+        return try newJSONEncoder().encode(self)
+    }
+
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
+    }
+}
+
+// MARK: - The1000011711703_Class
+struct The1000011711703_Class: Codable {
     let element: String
     let consts: [Element]
     let skillOrder: [Int]
@@ -4253,11 +4351,11 @@ struct The1000011: Codable {
     }
 }
 
-// MARK: The1000011 convenience initializers and mutators
+// MARK: The1000011711703_Class convenience initializers and mutators
 
-extension The1000011 {
+extension The1000011711703_Class {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(The1000011.self, from: data)
+        self = try newJSONDecoder().decode(The1000011711703_Class.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -4285,8 +4383,8 @@ extension The1000011 {
         baseProps: [String: Double]? = nil,
         propGrowCurves: [String: Double]? = nil,
         promoteProps: [[String: Double]]? = nil
-    ) -> The1000011 {
-        return The1000011(
+    ) -> The1000011711703_Class {
+        return The1000011711703_Class(
             element: element ?? self.element,
             consts: consts ?? self.consts,
             skillOrder: skillOrder ?? self.skillOrder,
