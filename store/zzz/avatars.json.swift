@@ -11,13 +11,16 @@ struct AvatarsJSONValue: Codable {
     let rarity: Int
     let professionType: ProfessionType
     let elementTypes: [String]
-    let image, circleIcon: String
+    let image: String
+    let circleIcon: String
     let weaponID: Int
     let skins: [String: Skin]
     let colors: Colors
     let highlightProps: [Int]
-    let baseProps, growthProps: [String: Int]
-    let promotionProps, coreEnhancementProps: [[String: Int]]
+    let baseProps: [String: Int]
+    let growthProps: [String: Int]
+    let promotionProps: [[String: Int]]
+    let coreEnhancementProps: [[String: Int]]
 
     enum CodingKeys: String, CodingKey {
         case name = "Name"
@@ -100,7 +103,9 @@ extension AvatarsJSONValue {
 
 // MARK: - Colors
 struct Colors: Codable {
-    let accent, accentExtra, mindscape: String
+    let accent: String
+    let accentExtra: String
+    let mindscape: String
 
     enum CodingKeys: String, CodingKey {
         case accent = "Accent"
@@ -159,7 +164,8 @@ enum ProfessionType: String, Codable {
 
 // MARK: - Skin
 struct Skin: Codable {
-    let image, circleIcon: String
+    let image: String
+    let circleIcon: String
 
     enum CodingKeys: String, CodingKey {
         case image = "Image"

@@ -7,12 +7,16 @@ import Foundation
 
 // MARK: - AvatarsJSONValue
 struct AvatarsJSONValue: Codable {
-    let avatarName, avatarFullName: AvatarName
+    let avatarName: AvatarName
+    let avatarFullName: AvatarName
     let rarity: Int
     let element: Element
     let avatarBaseType: AvatarBaseType
-    let avatarSideIconPath, actionAvatarHeadIconPath, avatarCutinFrontImgPath: String
-    let rankIDList, skillList: [Int]
+    let avatarSideIconPath: String
+    let actionAvatarHeadIconPath: String
+    let avatarCutinFrontImgPath: String
+    let rankIDList: [Int]
+    let skillList: [Int]
     let skins: [String: Skin]
     let skillTree: [String: SkillTree]
     let promotion: [String: Promotion]
@@ -161,10 +165,15 @@ enum Element: String, Codable {
 
 // MARK: - Promotion
 struct Promotion: Codable {
-    let attackBase, attackAdd, defenceBase, defenceAdd: Double
-    let hpBase, hpAdd: Double
+    let attackBase: Double
+    let attackAdd: Double
+    let defenceBase: Double
+    let defenceAdd: Double
+    let hpBase: Double
+    let hpAdd: Double
     let speedBase: Int
-    let criticalChance, criticalDamage: Double
+    let criticalChance: Double
+    let criticalDamage: Double
     let baseAggro: Int
 
     enum CodingKeys: String, CodingKey {
@@ -237,7 +246,8 @@ extension Promotion {
 // MARK: - SkillTree
 struct SkillTree: Codable {
     let avatarSkills: [Int]
-    let propSkills, summonSkills: [[Int]]
+    let propSkills: [[Int]]
+    let summonSkills: [[Int]]
 
     enum CodingKeys: String, CodingKey {
         case avatarSkills = "AvatarSkills"
@@ -287,7 +297,8 @@ extension SkillTree {
 
 // MARK: - Skin
 struct Skin: Codable {
-    let avatarSideIconPath, avatarCutinFrontImgPath: String
+    let avatarSideIconPath: String
+    let avatarCutinFrontImgPath: String
 
     enum CodingKeys: String, CodingKey {
         case avatarSideIconPath = "AvatarSideIconPath"

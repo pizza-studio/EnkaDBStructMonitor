@@ -9,7 +9,8 @@ import Foundation
 struct HonkerRelicsJSONValue: Codable {
     let rarity: Int
     let type: TypeEnum
-    let mainAffixGroup, subAffixGroup: Int
+    let mainAffixGroup: Int
+    let subAffixGroup: Int
     let icon: String
     let setID: Int
 

@@ -12,6 +12,14 @@ struct HonkerMetaJSON: Codable {
     let equipmentSkill: [String: [String: EquipmentSkill]]
     let relic: Relic
     let tree: [String: Tree]
+
+    enum CodingKeys: String, CodingKey {
+        case avatar = "avatar"
+        case equipment = "equipment"
+        case equipmentSkill = "equipmentSkill"
+        case relic = "relic"
+        case tree = "tree"
+    }
 }
 
 // MARK: HonkerMetaJSON convenience initializers and mutators
@@ -59,10 +67,15 @@ extension HonkerMetaJSON {
 
 // MARK: - Avatar
 struct Avatar: Codable {
-    let hpBase, hpAdd, attackBase, attackAdd: Double
-    let defenceBase, defenceAdd: Double
+    let hpBase: Double
+    let hpAdd: Double
+    let attackBase: Double
+    let attackAdd: Double
+    let defenceBase: Double
+    let defenceAdd: Double
     let speedBase: Int
-    let criticalChance, criticalDamage: Double
+    let criticalChance: Double
+    let criticalDamage: Double
     let baseAggro: Int
 
     enum CodingKeys: String, CodingKey {
@@ -134,8 +147,12 @@ extension Avatar {
 
 // MARK: - Equipment
 struct Equipment: Codable {
-    let baseHP, hpAdd, baseAttack, attackAdd: Double
-    let baseDefence, defenceAdd: Double
+    let baseHP: Double
+    let hpAdd: Double
+    let baseAttack: Double
+    let attackAdd: Double
+    let baseDefence: Double
+    let defenceAdd: Double
 
     enum CodingKeys: String, CodingKey {
         case baseHP = "BaseHP"
@@ -195,6 +212,10 @@ extension Equipment {
 // MARK: - EquipmentSkill
 struct EquipmentSkill: Codable {
     let props: [String: Double]
+
+    enum CodingKeys: String, CodingKey {
+        case props = "props"
+    }
 }
 
 // MARK: EquipmentSkill convenience initializers and mutators
@@ -237,6 +258,12 @@ struct Relic: Codable {
     let mainAffix: [String: [String: MainAffix]]
     let subAffix: [String: [String: SubAffix]]
     let setSkill: [String: [String: EquipmentSkill]]
+
+    enum CodingKeys: String, CodingKey {
+        case mainAffix = "mainAffix"
+        case subAffix = "subAffix"
+        case setSkill = "setSkill"
+    }
 }
 
 // MARK: Relic convenience initializers and mutators
@@ -281,7 +308,8 @@ extension Relic {
 // MARK: - MainAffix
 struct MainAffix: Codable {
     let property: String
-    let baseValue, levelAdd: Double
+    let baseValue: Double
+    let levelAdd: Double
 
     enum CodingKeys: String, CodingKey {
         case property = "Property"
@@ -332,7 +360,8 @@ extension MainAffix {
 // MARK: - SubAffix
 struct SubAffix: Codable {
     let property: String
-    let baseValue, stepValue: Double
+    let baseValue: Double
+    let stepValue: Double
 
     enum CodingKeys: String, CodingKey {
         case property = "Property"

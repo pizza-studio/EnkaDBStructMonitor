@@ -8,6 +8,10 @@ import Foundation
 // MARK: - NamecardsJSONValue
 struct NamecardsJSONValue: Codable {
     let icon: String
+
+    enum CodingKeys: String, CodingKey {
+        case icon = "icon"
+    }
 }
 
 // MARK: NamecardsJSONValue convenience initializers and mutators

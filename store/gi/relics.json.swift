@@ -55,7 +55,8 @@ extension RelicsJSON {
 
 // MARK: - Item
 struct Item: Codable {
-    let rarity, equipType: Int
+    let rarity: Int
+    let equipType: Int
     let icon: String
     let setID: Int
 

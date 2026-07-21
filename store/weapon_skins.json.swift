@@ -8,6 +8,10 @@ import Foundation
 // MARK: - WeaponSkinsJSONValue
 struct WeaponSkinsJSONValue: Codable {
     let iconPath: String
+
+    enum CodingKeys: String, CodingKey {
+        case iconPath = "iconPath"
+    }
 }
 
 // MARK: WeaponSkinsJSONValue convenience initializers and mutators

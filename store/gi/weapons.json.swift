@@ -7,10 +7,13 @@ import Foundation
 
 // MARK: - WeaponsJSONValue
 struct WeaponsJSONValue: Codable {
-    let rarity, weaponType: Int
-    let icon, awakenIcon: String
+    let rarity: Int
+    let weaponType: Int
+    let icon: String
+    let awakenIcon: String
     let nameTextMapHash: Int
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let basePromote: [Double]
     let refineProps: [String: [String: Double]]
 

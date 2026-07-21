@@ -7,12 +7,16 @@ import Foundation
 
 // MARK: - HonkerCharactersJSONValue
 struct HonkerCharactersJSONValue: Codable {
-    let avatarName, avatarFullName: AvatarName
+    let avatarName: AvatarName
+    let avatarFullName: AvatarName
     let rarity: Int
     let element: Element
     let avatarBaseType: AvatarBaseType
-    let avatarSideIconPath, actionAvatarHeadIconPath, avatarCutinFrontImgPath: String
-    let rankIDList, skillList: [Int]
+    let avatarSideIconPath: String
+    let actionAvatarHeadIconPath: String
+    let avatarCutinFrontImgPath: String
+    let rankIDList: [Int]
+    let skillList: [Int]
 
     enum CodingKeys: String, CodingKey {
         case avatarName = "AvatarName"

@@ -110,7 +110,8 @@ struct CharactersJSON: Codable {
     let the10000114: The10000114
     let the10000115: The10000115
     let the10000116: The10000116_Class
-    let the10000117, the10000118: The10000117
+    let the10000117: The10000117
+    let the10000118: The10000117
     let the10000119: The10000119
     let the10000120: The10000120
     let the10000121: The10000121
@@ -121,9 +122,11 @@ struct CharactersJSON: Codable {
     let the10000902: The10000046_Class
     let the10000903: The10000116_Class
     let the10000904: The10000023_Class
-    let the10000998, the10000999: The10000117
+    let the10000998: The10000117
+    let the10000999: The10000117
     let the11000046: The10000015
-    let the11000998, the11000999: The10000117
+    let the11000998: The10000117
+    let the11000999: The10000117
     let the10000005502: The10000005502
     let the10000005503: The10000005503
     let the10000005504: The10000005
@@ -586,7 +589,9 @@ struct The10000002: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000002_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -702,11 +707,15 @@ extension The10000002_Costumes {
 
 // MARK: - The200201
 struct The200201: Codable {
-    let sideIconName, icon, art: String
+    let sideIconName: String
+    let icon: String
+    let art: String
     let avatarID: Int
 
     enum CodingKeys: String, CodingKey {
-        case sideIconName, icon, art
+        case sideIconName = "sideIconName"
+        case icon = "icon"
+        case art = "art"
         case avatarID = "avatarId"
     }
 }
@@ -760,7 +769,9 @@ struct The10000003: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: [String: The200201]
 
     enum CodingKeys: String, CodingKey {
@@ -838,7 +849,9 @@ struct The10000005: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -912,7 +925,8 @@ struct The10000005501: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType: String
+    let sideIconName: String
+    let qualityType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -983,7 +997,9 @@ struct The10000005502: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1057,7 +1073,9 @@ struct The10000005503: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1131,7 +1149,9 @@ struct The10000005506: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1205,7 +1225,9 @@ struct The10000005507: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1279,7 +1301,9 @@ struct The10000005508: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1353,7 +1377,9 @@ struct The10000006: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000006_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -1475,7 +1501,9 @@ struct The10000007: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1549,7 +1577,8 @@ struct The10000007701: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType: String
+    let sideIconName: String
+    let qualityType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1620,7 +1649,9 @@ struct The10000007702: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1694,7 +1725,9 @@ struct The10000007703: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1768,7 +1801,9 @@ struct The10000007706: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1842,7 +1877,9 @@ struct The10000007707: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1916,7 +1953,9 @@ struct The10000007708: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -1990,7 +2029,9 @@ struct The10000014: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000014_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -2112,7 +2153,9 @@ struct The10000015: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000015_Costumes?
 
     enum CodingKeys: String, CodingKey {
@@ -2234,7 +2277,9 @@ struct The10000016: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000016_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -2356,7 +2401,9 @@ struct The10000020: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -2430,7 +2477,9 @@ struct The10000021: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000021_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -2552,7 +2601,9 @@ struct The10000022: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -2626,7 +2677,9 @@ struct The10000023_Class: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000023_Costumes?
 
     enum CodingKeys: String, CodingKey {
@@ -2748,7 +2801,9 @@ struct The10000024: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -2822,7 +2877,9 @@ struct The10000025: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000025_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -2944,7 +3001,9 @@ struct The10000026: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -3018,7 +3077,9 @@ struct The10000027: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000027_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -3140,7 +3201,9 @@ struct The10000029: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000029_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -3262,7 +3325,9 @@ struct The10000030: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -3336,7 +3401,9 @@ struct The10000031: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000031_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -3458,7 +3525,9 @@ struct The10000032: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000032_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -3580,7 +3649,9 @@ struct The10000033: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -3654,7 +3725,9 @@ struct The10000034: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -3728,7 +3801,9 @@ struct The10000035: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -3802,7 +3877,9 @@ struct The10000036: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -3876,7 +3953,9 @@ struct The10000037: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000037_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -3998,7 +4077,9 @@ struct The10000038: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -4072,7 +4153,9 @@ struct The10000039: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -4146,7 +4229,9 @@ struct The10000041: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000041_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -4268,7 +4353,9 @@ struct The10000042: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000042_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -4390,7 +4477,9 @@ struct The10000043: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -4464,7 +4553,9 @@ struct The10000044: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -4538,7 +4629,9 @@ struct The10000045: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000045_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -4660,7 +4753,9 @@ struct The10000046_Class: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000046_Costumes?
 
     enum CodingKeys: String, CodingKey {
@@ -4782,7 +4877,9 @@ struct The10000047: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -4856,7 +4953,9 @@ struct The10000048: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -4930,7 +5029,9 @@ struct The10000049: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5004,7 +5105,9 @@ struct The10000050: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5078,7 +5181,9 @@ struct The10000051: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5152,7 +5257,9 @@ struct The10000052: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5226,7 +5333,9 @@ struct The10000053: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5300,7 +5409,9 @@ struct The10000054: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5374,7 +5485,9 @@ struct The10000055: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5448,7 +5561,9 @@ struct The10000056: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5522,7 +5637,9 @@ struct The10000057: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5596,7 +5713,9 @@ struct The10000058: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5670,7 +5789,9 @@ struct The10000059: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -5744,7 +5865,9 @@ struct The10000060: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000060_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -5866,7 +5989,9 @@ struct The10000061: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000061_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -5988,7 +6113,9 @@ struct The10000062: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6062,7 +6189,9 @@ struct The10000063: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000063_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -6184,7 +6313,9 @@ struct The10000064: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6258,7 +6389,9 @@ struct The10000065: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6332,7 +6465,9 @@ struct The10000066: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6406,7 +6541,9 @@ struct The10000067: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6480,7 +6617,9 @@ struct The10000068: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6554,7 +6693,9 @@ struct The10000069: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6628,7 +6769,9 @@ struct The10000070: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000070_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -6750,7 +6893,9 @@ struct The10000071: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6824,7 +6969,9 @@ struct The10000072: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6898,7 +7045,9 @@ struct The10000073: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -6972,7 +7121,9 @@ struct The10000074: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7046,7 +7197,9 @@ struct The10000075: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7120,7 +7273,9 @@ struct The10000076: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7194,7 +7349,9 @@ struct The10000077: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7268,7 +7425,9 @@ struct The10000078: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7342,7 +7501,9 @@ struct The10000079: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7416,7 +7577,9 @@ struct The10000080: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7490,7 +7653,9 @@ struct The10000081: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7564,7 +7729,9 @@ struct The10000082: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7638,7 +7805,9 @@ struct The10000083: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7712,7 +7881,9 @@ struct The10000084: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7786,7 +7957,9 @@ struct The10000085: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7860,7 +8033,9 @@ struct The10000086: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -7934,7 +8109,9 @@ struct The10000087: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8008,7 +8185,9 @@ struct The10000088: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8082,7 +8261,9 @@ struct The10000089: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8156,7 +8337,9 @@ struct The10000090: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8230,7 +8413,9 @@ struct The10000091: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8304,7 +8489,9 @@ struct The10000092: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8378,7 +8565,9 @@ struct The10000093: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8452,7 +8641,9 @@ struct The10000094: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8526,7 +8717,9 @@ struct The10000095: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8600,7 +8793,9 @@ struct The10000096: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8674,7 +8869,9 @@ struct The10000097: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8748,7 +8945,9 @@ struct The10000098: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8822,7 +9021,9 @@ struct The10000099: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8896,7 +9097,9 @@ struct The10000100: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -8970,7 +9173,9 @@ struct The10000101: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9044,7 +9249,9 @@ struct The10000102: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9118,7 +9325,9 @@ struct The10000103: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9192,7 +9401,9 @@ struct The10000104: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9266,7 +9477,9 @@ struct The10000105: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9340,7 +9553,9 @@ struct The10000106: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9414,7 +9629,9 @@ struct The10000107: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9488,7 +9705,9 @@ struct The10000108: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9562,7 +9781,9 @@ struct The10000109: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9636,7 +9857,9 @@ struct The10000110: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9710,7 +9933,9 @@ struct The10000111: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9784,7 +10009,9 @@ struct The10000112: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9858,7 +10085,9 @@ struct The10000113: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -9932,7 +10161,9 @@ struct The10000114: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -10006,7 +10237,9 @@ struct The10000115: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -10080,7 +10313,9 @@ struct The10000116_Class: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -10191,7 +10426,9 @@ struct The10000119: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -10265,7 +10502,9 @@ struct The10000120: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -10339,7 +10578,9 @@ struct The10000121: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -10413,7 +10654,9 @@ struct The10000122: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"
@@ -10487,7 +10730,9 @@ struct The10000123: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000123_Costumes
 
     enum CodingKeys: String, CodingKey {
@@ -10609,7 +10854,9 @@ struct The10000124: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
 
     enum CodingKeys: String, CodingKey {
         case element = "Element"

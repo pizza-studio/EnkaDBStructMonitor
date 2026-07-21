@@ -57,7 +57,8 @@ extension RelicsJSON {
 struct Item: Codable {
     let rarity: Int
     let type: TypeEnum
-    let mainAffixGroup, subAffixGroup: Int
+    let mainAffixGroup: Int
+    let subAffixGroup: Int
     let icon: String
     let setID: Int
 
@@ -176,6 +177,10 @@ extension Set {
 // MARK: - SetSkill
 struct SetSkill: Codable {
     let props: [String: Double]
+
+    enum CodingKeys: String, CodingKey {
+        case props = "props"
+    }
 }
 
 // MARK: SetSkill convenience initializers and mutators
