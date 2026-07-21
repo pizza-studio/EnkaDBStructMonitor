@@ -7,7 +7,9 @@ import Foundation
 
 // MARK: - MedalsJSONValue
 struct MedalsJSONValue: Codable {
-    let name, icon, tipNum: String
+    let name: String
+    let icon: String
+    let tipNum: String
     let prefixIcon: PrefixIcon
 
     enum CodingKeys: String, CodingKey {

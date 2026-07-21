@@ -7,15 +7,38 @@ import Foundation
 
 // MARK: - LocsJSON
 struct LocsJSON: Codable {
-    let zhCN, zhTw, de, en: [String: String]
-    let es, fr, id, ja: [String: String]
-    let ko, pt, ru, th: [String: String]
-    let vi, tr, it: [String: String]
+    let zhCN: [String: String]
+    let zhTw: [String: String]
+    let de: [String: String]
+    let en: [String: String]
+    let es: [String: String]
+    let fr: [String: String]
+    let id: [String: String]
+    let ja: [String: String]
+    let ko: [String: String]
+    let pt: [String: String]
+    let ru: [String: String]
+    let th: [String: String]
+    let vi: [String: String]
+    let tr: [String: String]
+    let it: [String: String]
 
     enum CodingKeys: String, CodingKey {
         case zhCN = "zh-cn"
         case zhTw = "zh-tw"
-        case de, en, es, fr, id, ja, ko, pt, ru, th, vi, tr, it
+        case de = "de"
+        case en = "en"
+        case es = "es"
+        case fr = "fr"
+        case id = "id"
+        case ja = "ja"
+        case ko = "ko"
+        case pt = "pt"
+        case ru = "ru"
+        case th = "th"
+        case vi = "vi"
+        case tr = "tr"
+        case it = "it"
     }
 }
 

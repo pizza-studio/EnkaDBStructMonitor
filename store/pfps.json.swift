@@ -8,6 +8,10 @@ import Foundation
 // MARK: - PfpsJSONValue
 struct PfpsJSONValue: Codable {
     let iconPath: String?
+
+    enum CodingKeys: String, CodingKey {
+        case iconPath = "iconPath"
+    }
 }
 
 // MARK: PfpsJSONValue convenience initializers and mutators

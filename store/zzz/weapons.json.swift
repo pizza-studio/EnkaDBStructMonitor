@@ -11,7 +11,8 @@ struct WeaponsJSONValue: Codable {
     let rarity: Int
     let professionType: ProfessionType
     let imagePath: String
-    let mainStat, secondaryStat: Stat
+    let mainStat: Stat
+    let secondaryStat: Stat
 
     enum CodingKeys: String, CodingKey {
         case itemName = "ItemName"
@@ -70,7 +71,8 @@ extension WeaponsJSONValue {
 
 // MARK: - Stat
 struct Stat: Codable {
-    let propertyID, propertyValue: Int
+    let propertyID: Int
+    let propertyValue: Int
 
     enum CodingKeys: String, CodingKey {
         case propertyID = "PropertyId"

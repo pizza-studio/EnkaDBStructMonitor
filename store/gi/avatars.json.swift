@@ -9,13 +9,23 @@ import Foundation
 struct AvatarsJSON: Codable {
     let the10000002: The10000002
     let the10000003: The10000003
-    let the10000005, the10000005501: The1000000
-    let the10000005502, the10000005503, the10000005504, the10000005506: The1000000550
-    let the10000005507, the10000005508: The1000000550
+    let the10000005: The1000000
+    let the10000005501: The1000000
+    let the10000005502: The1000000550
+    let the10000005503: The1000000550
+    let the10000005504: The1000000550
+    let the10000005506: The1000000550
+    let the10000005507: The1000000550
+    let the10000005508: The1000000550
     let the10000006: The10000006
-    let the10000007, the10000007701: The1000000
-    let the10000007702, the10000007703, the10000007704, the10000007706: The1000000770
-    let the10000007707, the10000007708: The1000000770
+    let the10000007: The1000000
+    let the10000007701: The1000000
+    let the10000007702: The1000000770
+    let the10000007703: The1000000770
+    let the10000007704: The1000000770
+    let the10000007706: The1000000770
+    let the10000007707: The1000000770
+    let the10000007708: The1000000770
     let the10000014: The10000014
     let the10000015: The10000015
     let the10000016: The10000016
@@ -31,53 +41,120 @@ struct AvatarsJSON: Codable {
     let the10000030: The10000
     let the10000031: The10000031
     let the10000032: The10000032
-    let the10000033, the10000034, the10000035, the10000036: The10000
+    let the10000033: The10000
+    let the10000034: The10000
+    let the10000035: The10000
+    let the10000036: The10000
     let the10000037: The10000037
-    let the10000038, the10000039: The10000
+    let the10000038: The10000
+    let the10000039: The10000
     let the10000041: The10000041
     let the10000042: The10000042
-    let the10000043, the10000044: The10000
+    let the10000043: The10000
+    let the10000044: The10000
     let the10000045: The10000045
     let the10000046: The10000046
-    let the10000047, the10000048, the10000049, the10000050: The10000
-    let the10000051, the10000052, the10000053, the10000054: The10000
-    let the10000055, the10000056, the10000057, the10000058: The10000
+    let the10000047: The10000
+    let the10000048: The10000
+    let the10000049: The10000
+    let the10000050: The10000
+    let the10000051: The10000
+    let the10000052: The10000
+    let the10000053: The10000
+    let the10000054: The10000
+    let the10000055: The10000
+    let the10000056: The10000
+    let the10000057: The10000
+    let the10000058: The10000
     let the10000059: The10000
     let the10000060: The10000060
     let the10000061: The10000061
     let the10000062: The10000
     let the10000063: The10000063
-    let the10000064, the10000065, the10000066, the10000067: The10000
-    let the10000068, the10000069: The10000
+    let the10000064: The10000
+    let the10000065: The10000
+    let the10000066: The10000
+    let the10000067: The10000
+    let the10000068: The10000
+    let the10000069: The10000
     let the10000070: The10000070
-    let the10000071, the10000072, the10000073, the10000074: The10000
-    let the10000075, the10000076: The10000
+    let the10000071: The10000
+    let the10000072: The10000
+    let the10000073: The10000
+    let the10000074: The10000
+    let the10000075: The10000
+    let the10000076: The10000
     let the10000077: The10000077
-    let the10000078, the10000079, the10000080, the10000081: The10000
-    let the10000082, the10000083, the10000084, the10000085: The10000
+    let the10000078: The10000
+    let the10000079: The10000
+    let the10000080: The10000
+    let the10000081: The10000
+    let the10000082: The10000
+    let the10000083: The10000
+    let the10000084: The10000
+    let the10000085: The10000
     let the10000086: The10000
     let the10000087: The10000087
     let the10000088: The10000088
-    let the10000089, the10000090, the10000091, the10000092: The10000
-    let the10000093, the10000094, the10000095, the10000096: The10000
-    let the10000097, the10000098, the10000099, the10000100: The10000
-    let the10000101, the10000102, the10000103, the10000104: The10000
-    let the10000105, the10000106: The10000
+    let the10000089: The10000
+    let the10000090: The10000
+    let the10000091: The10000
+    let the10000092: The10000
+    let the10000093: The10000
+    let the10000094: The10000
+    let the10000095: The10000
+    let the10000096: The10000
+    let the10000097: The10000
+    let the10000098: The10000
+    let the10000099: The10000
+    let the10000100: The10000
+    let the10000101: The10000
+    let the10000102: The10000
+    let the10000103: The10000
+    let the10000104: The10000
+    let the10000105: The10000
+    let the10000106: The10000
     let the10000107: The10000107
-    let the10000108, the10000109, the10000110, the10000111: The10000
-    let the10000112, the10000113, the10000114, the10000115: The10000
+    let the10000108: The10000
+    let the10000109: The10000
+    let the10000110: The10000
+    let the10000111: The10000
+    let the10000112: The10000
+    let the10000113: The10000
+    let the10000114: The10000
+    let the10000115: The10000
     let the10000116: The10000
-    let the1000011711701, the1000011711702: The1000011711701_Class
-    let the1000011711703, the1000011711704, the1000011711705, the1000011711706: The1000011711703_Class
-    let the1000011711707, the1000011711708: The1000011711703_Class
-    let the1000011811801, the1000011811802: The1000011711701_Class
-    let the1000011811803, the1000011811804, the1000011811805, the1000011811806: The1000011711703_Class
-    let the1000011811807, the1000011811808: The1000011711703_Class
-    let the10000119, the10000120, the10000121, the10000122: The10000
+    let the1000011711701: The1000011711701_Class
+    let the1000011711702: The1000011711701_Class
+    let the1000011711703: The1000011711703_Class
+    let the1000011711704: The1000011711703_Class
+    let the1000011711705: The1000011711703_Class
+    let the1000011711706: The1000011711703_Class
+    let the1000011711707: The1000011711703_Class
+    let the1000011711708: The1000011711703_Class
+    let the1000011811801: The1000011711701_Class
+    let the1000011811802: The1000011711701_Class
+    let the1000011811803: The1000011711703_Class
+    let the1000011811804: The1000011711703_Class
+    let the1000011811805: The1000011711703_Class
+    let the1000011811806: The1000011711703_Class
+    let the1000011811807: The1000011711703_Class
+    let the1000011811808: The1000011711703_Class
+    let the10000119: The10000
+    let the10000120: The10000
+    let the10000121: The10000
+    let the10000122: The10000
     let the10000123: The10000123
-    let the10000124, the10000125, the10000126, the10000127: The10000
-    let the10000128, the10000129, the10000130, the10000131: The10000
-    let the10000132, the10000133: The10000
+    let the10000124: The10000
+    let the10000125: The10000
+    let the10000126: The10000
+    let the10000127: The10000
+    let the10000128: The10000
+    let the10000129: The10000
+    let the10000130: The10000
+    let the10000131: The10000
+    let the10000132: The10000
+    let the10000133: The10000
 
     enum CodingKeys: String, CodingKey {
         case the10000002 = "10000002"
@@ -568,9 +645,12 @@ struct The10000002: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000002_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -695,7 +775,9 @@ extension The10000002_Costumes {
 
 // MARK: - The200201
 struct The200201: Codable {
-    let sideIcon, icon, art: String
+    let sideIcon: String
+    let icon: String
+    let art: String
 
     enum CodingKeys: String, CodingKey {
         case sideIcon = "SideIcon"
@@ -751,9 +833,12 @@ struct The10000003: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: [String: The200201]
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -840,8 +925,10 @@ struct The1000000: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType: String
-    let baseProps, propGrowCurves: [String: Double]
+    let sideIconName: String
+    let qualityType: String
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -926,9 +1013,12 @@ struct The1000000550: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000005502_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -1059,9 +1149,12 @@ struct The10000006: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000006_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -1192,9 +1285,12 @@ struct The1000000770: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000007702_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -1325,9 +1421,12 @@ struct The10000014: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000014_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -1458,9 +1557,12 @@ struct The10000015: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000015_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -1591,9 +1693,12 @@ struct The10000016: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000016_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -1724,9 +1829,12 @@ struct The10000: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000020_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -1850,9 +1958,12 @@ struct The10000021: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000021_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -1983,9 +2094,12 @@ struct The10000023: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000023_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -2116,9 +2230,12 @@ struct The10000025: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000025_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -2249,9 +2366,12 @@ struct The10000027: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000027_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -2382,9 +2502,12 @@ struct The10000029: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000029_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -2515,9 +2638,12 @@ struct The10000031: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000031_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -2648,9 +2774,12 @@ struct The10000032: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000032_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -2781,9 +2910,12 @@ struct The10000037: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000037_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -2914,9 +3046,12 @@ struct The10000041: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000041_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -3047,9 +3182,12 @@ struct The10000042: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000042_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -3180,9 +3318,12 @@ struct The10000045: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000045_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -3313,9 +3454,12 @@ struct The10000046: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000046_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -3446,9 +3590,12 @@ struct The10000060: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000060_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -3579,9 +3726,12 @@ struct The10000061: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000061_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -3712,9 +3862,12 @@ struct The10000063: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000063_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -3845,9 +3998,12 @@ struct The10000070: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000070_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -3978,9 +4134,12 @@ struct The10000077: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000077_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -4111,9 +4270,12 @@ struct The10000087: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000087_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -4244,9 +4406,12 @@ struct The10000088: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000088_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -4377,9 +4542,12 @@ struct The10000107: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000107_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -4510,8 +4678,10 @@ struct The1000011711701_Class: Codable {
     let skills: [String: String]
     let nameTextMapHash: Int
     let proudMap: [String: Int]
-    let sideIconName, qualityType: String
-    let baseProps, propGrowCurves: [String: Double]
+    let sideIconName: String
+    let qualityType: String
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
     let weaponType: String?
     let costumes: The10000020_Costumes?
@@ -4600,9 +4770,12 @@ struct The1000011711703_Class: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000020_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {
@@ -4689,9 +4862,12 @@ struct The10000123: Codable {
     let skills: [String: String]
     let proudMap: [String: Int]
     let nameTextMapHash: Int
-    let sideIconName, qualityType, weaponType: String
+    let sideIconName: String
+    let qualityType: String
+    let weaponType: String
     let costumes: The10000123_Costumes
-    let baseProps, propGrowCurves: [String: Double]
+    let baseProps: [String: Double]
+    let propGrowCurves: [String: Double]
     let promoteProps: [[String: Double]]
 
     enum CodingKeys: String, CodingKey {

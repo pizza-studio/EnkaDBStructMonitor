@@ -56,7 +56,8 @@ extension AffixesJSON {
 // MARK: - MainAffix
 struct MainAffix: Codable {
     let property: String
-    let baseValue, levelAdd: Double
+    let baseValue: Double
+    let levelAdd: Double
 
     enum CodingKeys: String, CodingKey {
         case property = "Property"
@@ -107,7 +108,8 @@ extension MainAffix {
 // MARK: - SubAffix
 struct SubAffix: Codable {
     let property: String
-    let baseValue, stepValue: Double
+    let baseValue: Double
+    let stepValue: Double
 
     enum CodingKeys: String, CodingKey {
         case property = "Property"

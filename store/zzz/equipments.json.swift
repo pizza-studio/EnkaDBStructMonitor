@@ -55,7 +55,8 @@ extension EquipmentsJSON {
 
 // MARK: - Item
 struct Item: Codable {
-    let rarity, suitID: Int
+    let rarity: Int
+    let suitID: Int
 
     enum CodingKeys: String, CodingKey {
         case rarity = "Rarity"
@@ -102,7 +103,8 @@ extension Item {
 
 // MARK: - Suit
 struct Suit: Codable {
-    let icon, name: String
+    let icon: String
+    let name: String
     let setBonusProps: [String: Int]
 
     enum CodingKeys: String, CodingKey {

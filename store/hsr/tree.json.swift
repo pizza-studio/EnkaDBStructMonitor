@@ -52,6 +52,10 @@ extension TreeJSONValue {
 // MARK: - The1
 struct The1: Codable {
     let props: [String: Double]
+
+    enum CodingKeys: String, CodingKey {
+        case props = "props"
+    }
 }
 
 // MARK: The1 convenience initializers and mutators

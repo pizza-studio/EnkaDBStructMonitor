@@ -10,6 +10,12 @@ struct AffixesJSONValue: Codable {
     let propType: PropType
     let efficiency: Double
     let position: Int
+
+    enum CodingKeys: String, CodingKey {
+        case propType = "propType"
+        case efficiency = "efficiency"
+        case position = "position"
+    }
 }
 
 // MARK: AffixesJSONValue convenience initializers and mutators

@@ -128,6 +128,10 @@ extension EquipmentName {
 // MARK: - EquipmentSkill
 struct EquipmentSkill: Codable {
     let props: [String: Double]
+
+    enum CodingKeys: String, CodingKey {
+        case props = "props"
+    }
 }
 
 // MARK: EquipmentSkill convenience initializers and mutators
@@ -167,8 +171,12 @@ extension EquipmentSkill {
 
 // MARK: - Promotion
 struct Promotion: Codable {
-    let baseHP, baseHPAdd, baseAttack, baseAttackAdd: Double
-    let baseDefence, baseDefenceAdd: Double
+    let baseHP: Double
+    let baseHPAdd: Double
+    let baseAttack: Double
+    let baseAttackAdd: Double
+    let baseDefence: Double
+    let baseDefenceAdd: Double
 
     enum CodingKeys: String, CodingKey {
         case baseHP = "BaseHP"
