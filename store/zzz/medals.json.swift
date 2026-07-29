@@ -9,7 +9,7 @@ import Foundation
 struct MedalsJSONValue: Codable {
     let name: String
     let icon: String
-    let tipNum: String
+    let tipNum: Int
     let prefixIcon: PrefixIcon
 
     enum CodingKeys: String, CodingKey {
@@ -41,7 +41,7 @@ extension MedalsJSONValue {
     func with(
         name: String? = nil,
         icon: String? = nil,
-        tipNum: String? = nil,
+        tipNum: Int? = nil,
         prefixIcon: PrefixIcon? = nil
     ) -> MedalsJSONValue {
         return MedalsJSONValue(
@@ -64,6 +64,7 @@ extension MedalsJSONValue {
 enum PrefixIcon: String, Codable {
     case empty = ""
     case uiZzzCrown02PNG = "/ui/zzz/Crown02.png"
+    case uiZzzCrown03PNG = "/ui/zzz/Crown03.png"
     case uiZzzCrownPNG = "/ui/zzz/Crown.png"
 }
 
