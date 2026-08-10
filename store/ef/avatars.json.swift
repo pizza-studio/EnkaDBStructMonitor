@@ -231,6 +231,10 @@ struct AttributeNodes: Codable {
     let chr0033_Camille7: Chr?
     let chr0033_Camille5: Chr?
     let chr0033_Camille3: Chr?
+    let chr0035_Liino1: Chr0011_Seraph1_Class?
+    let chr0035_Liino3: Chr0011_Seraph1_Class?
+    let chr0035_Liino7: Chr0011_Seraph1_Class?
+    let chr0035_Liino5: Chr0011_Seraph1_Class?
 
     enum CodingKeys: String, CodingKey {
         case chr0007_Ikut3 = "chr_0007_ikut_3"
@@ -357,6 +361,10 @@ struct AttributeNodes: Codable {
         case chr0033_Camille7 = "chr_0033_camille_7"
         case chr0033_Camille5 = "chr_0033_camille_5"
         case chr0033_Camille3 = "chr_0033_camille_3"
+        case chr0035_Liino1 = "chr_0035_liino_1"
+        case chr0035_Liino3 = "chr_0035_liino_3"
+        case chr0035_Liino7 = "chr_0035_liino_7"
+        case chr0035_Liino5 = "chr_0035_liino_5"
     }
 }
 
@@ -502,7 +510,11 @@ extension AttributeNodes {
         chr0033_Camille1: Chr?? = nil,
         chr0033_Camille7: Chr?? = nil,
         chr0033_Camille5: Chr?? = nil,
-        chr0033_Camille3: Chr?? = nil
+        chr0033_Camille3: Chr?? = nil,
+        chr0035_Liino1: Chr0011_Seraph1_Class?? = nil,
+        chr0035_Liino3: Chr0011_Seraph1_Class?? = nil,
+        chr0035_Liino7: Chr0011_Seraph1_Class?? = nil,
+        chr0035_Liino5: Chr0011_Seraph1_Class?? = nil
     ) -> AttributeNodes {
         return AttributeNodes(
             chr0007_Ikut3: chr0007_Ikut3 ?? self.chr0007_Ikut3,
@@ -628,7 +640,11 @@ extension AttributeNodes {
             chr0033_Camille1: chr0033_Camille1 ?? self.chr0033_Camille1,
             chr0033_Camille7: chr0033_Camille7 ?? self.chr0033_Camille7,
             chr0033_Camille5: chr0033_Camille5 ?? self.chr0033_Camille5,
-            chr0033_Camille3: chr0033_Camille3 ?? self.chr0033_Camille3
+            chr0033_Camille3: chr0033_Camille3 ?? self.chr0033_Camille3,
+            chr0035_Liino1: chr0035_Liino1 ?? self.chr0035_Liino1,
+            chr0035_Liino3: chr0035_Liino3 ?? self.chr0035_Liino3,
+            chr0035_Liino7: chr0035_Liino7 ?? self.chr0035_Liino7,
+            chr0035_Liino5: chr0035_Liino5 ?? self.chr0035_Liino5
         )
     }
 
