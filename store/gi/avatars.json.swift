@@ -14,6 +14,7 @@ struct AvatarsJSON: Codable {
     let the10000005502: The1000000550
     let the10000005503: The1000000550
     let the10000005504: The1000000550
+    let the10000005505: The1000000550
     let the10000005506: The1000000550
     let the10000005507: The1000000550
     let the10000005508: The1000000550
@@ -23,6 +24,7 @@ struct AvatarsJSON: Codable {
     let the10000007702: The1000000770
     let the10000007703: The1000000770
     let the10000007704: The1000000770
+    let the10000007705: The1000000770
     let the10000007706: The1000000770
     let the10000007707: The1000000770
     let the10000007708: The1000000770
@@ -155,6 +157,8 @@ struct AvatarsJSON: Codable {
     let the10000131: The10000
     let the10000132: The10000
     let the10000133: The10000
+    let the10000148: The10000
+    let the10000150: The10000
 
     enum CodingKeys: String, CodingKey {
         case the10000002 = "10000002"
@@ -164,6 +168,7 @@ struct AvatarsJSON: Codable {
         case the10000005502 = "10000005-502"
         case the10000005503 = "10000005-503"
         case the10000005504 = "10000005-504"
+        case the10000005505 = "10000005-505"
         case the10000005506 = "10000005-506"
         case the10000005507 = "10000005-507"
         case the10000005508 = "10000005-508"
@@ -173,6 +178,7 @@ struct AvatarsJSON: Codable {
         case the10000007702 = "10000007-702"
         case the10000007703 = "10000007-703"
         case the10000007704 = "10000007-704"
+        case the10000007705 = "10000007-705"
         case the10000007706 = "10000007-706"
         case the10000007707 = "10000007-707"
         case the10000007708 = "10000007-708"
@@ -305,6 +311,8 @@ struct AvatarsJSON: Codable {
         case the10000131 = "10000131"
         case the10000132 = "10000132"
         case the10000133 = "10000133"
+        case the10000148 = "10000148"
+        case the10000150 = "10000150"
     }
 }
 
@@ -334,6 +342,7 @@ extension AvatarsJSON {
         the10000005502: The1000000550? = nil,
         the10000005503: The1000000550? = nil,
         the10000005504: The1000000550? = nil,
+        the10000005505: The1000000550? = nil,
         the10000005506: The1000000550? = nil,
         the10000005507: The1000000550? = nil,
         the10000005508: The1000000550? = nil,
@@ -343,6 +352,7 @@ extension AvatarsJSON {
         the10000007702: The1000000770? = nil,
         the10000007703: The1000000770? = nil,
         the10000007704: The1000000770? = nil,
+        the10000007705: The1000000770? = nil,
         the10000007706: The1000000770? = nil,
         the10000007707: The1000000770? = nil,
         the10000007708: The1000000770? = nil,
@@ -474,7 +484,9 @@ extension AvatarsJSON {
         the10000130: The10000? = nil,
         the10000131: The10000? = nil,
         the10000132: The10000? = nil,
-        the10000133: The10000? = nil
+        the10000133: The10000? = nil,
+        the10000148: The10000? = nil,
+        the10000150: The10000? = nil
     ) -> AvatarsJSON {
         return AvatarsJSON(
             the10000002: the10000002 ?? self.the10000002,
@@ -484,6 +496,7 @@ extension AvatarsJSON {
             the10000005502: the10000005502 ?? self.the10000005502,
             the10000005503: the10000005503 ?? self.the10000005503,
             the10000005504: the10000005504 ?? self.the10000005504,
+            the10000005505: the10000005505 ?? self.the10000005505,
             the10000005506: the10000005506 ?? self.the10000005506,
             the10000005507: the10000005507 ?? self.the10000005507,
             the10000005508: the10000005508 ?? self.the10000005508,
@@ -493,6 +506,7 @@ extension AvatarsJSON {
             the10000007702: the10000007702 ?? self.the10000007702,
             the10000007703: the10000007703 ?? self.the10000007703,
             the10000007704: the10000007704 ?? self.the10000007704,
+            the10000007705: the10000007705 ?? self.the10000007705,
             the10000007706: the10000007706 ?? self.the10000007706,
             the10000007707: the10000007707 ?? self.the10000007707,
             the10000007708: the10000007708 ?? self.the10000007708,
@@ -624,7 +638,9 @@ extension AvatarsJSON {
             the10000130: the10000130 ?? self.the10000130,
             the10000131: the10000131 ?? self.the10000131,
             the10000132: the10000132 ?? self.the10000132,
-            the10000133: the10000133 ?? self.the10000133
+            the10000133: the10000133 ?? self.the10000133,
+            the10000148: the10000148 ?? self.the10000148,
+            the10000150: the10000150 ?? self.the10000150
         )
     }
 
