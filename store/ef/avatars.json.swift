@@ -231,6 +231,10 @@ struct AttributeNodes: Codable {
     let chr0033_Camille7: Chr?
     let chr0033_Camille5: Chr?
     let chr0033_Camille3: Chr?
+    let chr0034_Typhoea7: Chr?
+    let chr0034_Typhoea3: Chr?
+    let chr0034_Typhoea5: Chr?
+    let chr0034_Typhoea1: Chr?
     let chr0035_Liino1: Chr0011_Seraph1_Class?
     let chr0035_Liino3: Chr0011_Seraph1_Class?
     let chr0035_Liino7: Chr0011_Seraph1_Class?
@@ -361,6 +365,10 @@ struct AttributeNodes: Codable {
         case chr0033_Camille7 = "chr_0033_camille_7"
         case chr0033_Camille5 = "chr_0033_camille_5"
         case chr0033_Camille3 = "chr_0033_camille_3"
+        case chr0034_Typhoea7 = "chr_0034_typhoea_7"
+        case chr0034_Typhoea3 = "chr_0034_typhoea_3"
+        case chr0034_Typhoea5 = "chr_0034_typhoea_5"
+        case chr0034_Typhoea1 = "chr_0034_typhoea_1"
         case chr0035_Liino1 = "chr_0035_liino_1"
         case chr0035_Liino3 = "chr_0035_liino_3"
         case chr0035_Liino7 = "chr_0035_liino_7"
@@ -511,6 +519,10 @@ extension AttributeNodes {
         chr0033_Camille7: Chr?? = nil,
         chr0033_Camille5: Chr?? = nil,
         chr0033_Camille3: Chr?? = nil,
+        chr0034_Typhoea7: Chr?? = nil,
+        chr0034_Typhoea3: Chr?? = nil,
+        chr0034_Typhoea5: Chr?? = nil,
+        chr0034_Typhoea1: Chr?? = nil,
         chr0035_Liino1: Chr0011_Seraph1_Class?? = nil,
         chr0035_Liino3: Chr0011_Seraph1_Class?? = nil,
         chr0035_Liino7: Chr0011_Seraph1_Class?? = nil,
@@ -641,6 +653,10 @@ extension AttributeNodes {
             chr0033_Camille7: chr0033_Camille7 ?? self.chr0033_Camille7,
             chr0033_Camille5: chr0033_Camille5 ?? self.chr0033_Camille5,
             chr0033_Camille3: chr0033_Camille3 ?? self.chr0033_Camille3,
+            chr0034_Typhoea7: chr0034_Typhoea7 ?? self.chr0034_Typhoea7,
+            chr0034_Typhoea3: chr0034_Typhoea3 ?? self.chr0034_Typhoea3,
+            chr0034_Typhoea5: chr0034_Typhoea5 ?? self.chr0034_Typhoea5,
+            chr0034_Typhoea1: chr0034_Typhoea1 ?? self.chr0034_Typhoea1,
             chr0035_Liino1: chr0035_Liino1 ?? self.chr0035_Liino1,
             chr0035_Liino3: chr0035_Liino3 ?? self.chr0035_Liino3,
             chr0035_Liino7: chr0035_Liino7 ?? self.chr0035_Liino7,
