@@ -119,6 +119,7 @@ extension Stat {
 
 enum ProfessionType: String, Codable {
     case anomaly = "Anomaly"
+    case armorer = "Armorer"
     case attack = "Attack"
     case defense = "Defense"
     case rupture = "Rupture"
