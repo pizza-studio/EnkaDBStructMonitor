@@ -165,28 +165,28 @@ enum Element: String, Codable {
 
 // MARK: - Promotion
 struct Promotion: Codable {
-    let attackBase: Double
     let attackAdd: Double
-    let defenceBase: Double
-    let defenceAdd: Double
-    let hpBase: Double
-    let hpAdd: Double
-    let speedBase: Int
+    let attackBase: Double
+    let baseAggro: Int
     let criticalChance: Double
     let criticalDamage: Double
-    let baseAggro: Int
+    let defenceAdd: Double
+    let defenceBase: Double
+    let hpAdd: Double
+    let hpBase: Double
+    let speedBase: Int
 
     enum CodingKeys: String, CodingKey {
-        case attackBase = "AttackBase"
         case attackAdd = "AttackAdd"
-        case defenceBase = "DefenceBase"
-        case defenceAdd = "DefenceAdd"
-        case hpBase = "HPBase"
-        case hpAdd = "HPAdd"
-        case speedBase = "SpeedBase"
+        case attackBase = "AttackBase"
+        case baseAggro = "BaseAggro"
         case criticalChance = "CriticalChance"
         case criticalDamage = "CriticalDamage"
-        case baseAggro = "BaseAggro"
+        case defenceAdd = "DefenceAdd"
+        case defenceBase = "DefenceBase"
+        case hpAdd = "HPAdd"
+        case hpBase = "HPBase"
+        case speedBase = "SpeedBase"
     }
 }
 
@@ -209,28 +209,28 @@ extension Promotion {
     }
 
     func with(
-        attackBase: Double? = nil,
         attackAdd: Double? = nil,
-        defenceBase: Double? = nil,
-        defenceAdd: Double? = nil,
-        hpBase: Double? = nil,
-        hpAdd: Double? = nil,
-        speedBase: Int? = nil,
+        attackBase: Double? = nil,
+        baseAggro: Int? = nil,
         criticalChance: Double? = nil,
         criticalDamage: Double? = nil,
-        baseAggro: Int? = nil
+        defenceAdd: Double? = nil,
+        defenceBase: Double? = nil,
+        hpAdd: Double? = nil,
+        hpBase: Double? = nil,
+        speedBase: Int? = nil
     ) -> Promotion {
         return Promotion(
-            attackBase: attackBase ?? self.attackBase,
             attackAdd: attackAdd ?? self.attackAdd,
-            defenceBase: defenceBase ?? self.defenceBase,
-            defenceAdd: defenceAdd ?? self.defenceAdd,
-            hpBase: hpBase ?? self.hpBase,
-            hpAdd: hpAdd ?? self.hpAdd,
-            speedBase: speedBase ?? self.speedBase,
+            attackBase: attackBase ?? self.attackBase,
+            baseAggro: baseAggro ?? self.baseAggro,
             criticalChance: criticalChance ?? self.criticalChance,
             criticalDamage: criticalDamage ?? self.criticalDamage,
-            baseAggro: baseAggro ?? self.baseAggro
+            defenceAdd: defenceAdd ?? self.defenceAdd,
+            defenceBase: defenceBase ?? self.defenceBase,
+            hpAdd: hpAdd ?? self.hpAdd,
+            hpBase: hpBase ?? self.hpBase,
+            speedBase: speedBase ?? self.speedBase
         )
     }
 

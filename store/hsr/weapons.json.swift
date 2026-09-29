@@ -171,20 +171,20 @@ extension EquipmentSkill {
 
 // MARK: - Promotion
 struct Promotion: Codable {
-    let baseHP: Double
-    let baseHPAdd: Double
     let baseAttack: Double
     let baseAttackAdd: Double
     let baseDefence: Double
     let baseDefenceAdd: Double
+    let baseHP: Double
+    let baseHPAdd: Double
 
     enum CodingKeys: String, CodingKey {
-        case baseHP = "BaseHP"
-        case baseHPAdd = "BaseHPAdd"
         case baseAttack = "BaseAttack"
         case baseAttackAdd = "BaseAttackAdd"
         case baseDefence = "BaseDefence"
         case baseDefenceAdd = "BaseDefenceAdd"
+        case baseHP = "BaseHP"
+        case baseHPAdd = "BaseHPAdd"
     }
 }
 
@@ -207,20 +207,20 @@ extension Promotion {
     }
 
     func with(
-        baseHP: Double? = nil,
-        baseHPAdd: Double? = nil,
         baseAttack: Double? = nil,
         baseAttackAdd: Double? = nil,
         baseDefence: Double? = nil,
-        baseDefenceAdd: Double? = nil
+        baseDefenceAdd: Double? = nil,
+        baseHP: Double? = nil,
+        baseHPAdd: Double? = nil
     ) -> Promotion {
         return Promotion(
-            baseHP: baseHP ?? self.baseHP,
-            baseHPAdd: baseHPAdd ?? self.baseHPAdd,
             baseAttack: baseAttack ?? self.baseAttack,
             baseAttackAdd: baseAttackAdd ?? self.baseAttackAdd,
             baseDefence: baseDefence ?? self.baseDefence,
-            baseDefenceAdd: baseDefenceAdd ?? self.baseDefenceAdd
+            baseDefenceAdd: baseDefenceAdd ?? self.baseDefenceAdd,
+            baseHP: baseHP ?? self.baseHP,
+            baseHPAdd: baseHPAdd ?? self.baseHPAdd
         )
     }
 
