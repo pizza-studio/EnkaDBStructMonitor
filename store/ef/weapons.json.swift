@@ -11,7 +11,7 @@ struct WeaponsJSONValue: Codable {
     let nameHash: String
     let weaponType: WeaponType
     let icon: String
-    let levelTemplateID: String
+    let levelTemplateID: LevelTemplateID
     let breakthroughTemplateID: String
     let talentTemplateID: TalentTemplateID
     let skillList: [Int]
@@ -51,7 +51,7 @@ extension WeaponsJSONValue {
         nameHash: String? = nil,
         weaponType: WeaponType? = nil,
         icon: String? = nil,
-        levelTemplateID: String? = nil,
+        levelTemplateID: LevelTemplateID? = nil,
         breakthroughTemplateID: String? = nil,
         talentTemplateID: TalentTemplateID? = nil,
         skillList: [Int]? = nil
@@ -75,6 +75,18 @@ extension WeaponsJSONValue {
     func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
         return String(data: try self.jsonData(), encoding: encoding)
     }
+}
+
+enum LevelTemplateID: String, Codable {
+    case weaponUpgradeCurve3Star1 = "weapon_upgrade_curve_3star_1"
+    case weaponUpgradeCurve4Star1 = "weapon_upgrade_curve_4star_1"
+    case weaponUpgradeCurve5Star1 = "weapon_upgrade_curve_5star_1"
+    case weaponUpgradeCurve6Star098 = "weapon_upgrade_curve_6star_0.98"
+    case weaponUpgradeCurve6Star099 = "weapon_upgrade_curve_6star_0.99"
+    case weaponUpgradeCurve6Star1 = "weapon_upgrade_curve_6star_1"
+    case weaponUpgradeCurve6Star101 = "weapon_upgrade_curve_6star_1.01"
+    case weaponUpgradeCurve6Star102 = "weapon_upgrade_curve_6star_1.02"
+    case weaponUpgradeCurve6Star103 = "weapon_upgrade_curve_6star_1.03"
 }
 
 enum TalentTemplateID: String, Codable {
