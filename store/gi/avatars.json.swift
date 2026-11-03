@@ -157,6 +157,8 @@ struct AvatarsJSON: Codable {
     let the10000131: The10000
     let the10000132: The10000
     let the10000133: The10000
+    let the10000136: The10000
+    let the10000137: The10000
     let the10000140: The10000
     let the10000143: The10000
     let the10000148: The10000
@@ -313,6 +315,8 @@ struct AvatarsJSON: Codable {
         case the10000131 = "10000131"
         case the10000132 = "10000132"
         case the10000133 = "10000133"
+        case the10000136 = "10000136"
+        case the10000137 = "10000137"
         case the10000140 = "10000140"
         case the10000143 = "10000143"
         case the10000148 = "10000148"
@@ -489,6 +493,8 @@ extension AvatarsJSON {
         the10000131: The10000? = nil,
         the10000132: The10000? = nil,
         the10000133: The10000? = nil,
+        the10000136: The10000? = nil,
+        the10000137: The10000? = nil,
         the10000140: The10000? = nil,
         the10000143: The10000? = nil,
         the10000148: The10000? = nil,
@@ -645,6 +651,8 @@ extension AvatarsJSON {
             the10000131: the10000131 ?? self.the10000131,
             the10000132: the10000132 ?? self.the10000132,
             the10000133: the10000133 ?? self.the10000133,
+            the10000136: the10000136 ?? self.the10000136,
+            the10000137: the10000137 ?? self.the10000137,
             the10000140: the10000140 ?? self.the10000140,
             the10000143: the10000143 ?? self.the10000143,
             the10000148: the10000148 ?? self.the10000148,
