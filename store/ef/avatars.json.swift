@@ -247,6 +247,10 @@ struct AttributeNodes: Codable {
     let chr0036_Jsspsi3: Chr0004_Pelica1_Class?
     let chr0036_Jsspsi5: Chr0004_Pelica1_Class?
     let chr0036_Jsspsi7: Chr0004_Pelica1_Class?
+    let chr0037_Minghe1: Chr0011_Seraph1_Class?
+    let chr0037_Minghe3: Chr0011_Seraph1_Class?
+    let chr0037_Minghe5: Chr0011_Seraph1_Class?
+    let chr0037_Minghe7: Chr0011_Seraph1_Class?
 
     enum CodingKeys: String, CodingKey {
         case chr0007_Ikut1 = "chr_0007_ikut_1"
@@ -389,6 +393,10 @@ struct AttributeNodes: Codable {
         case chr0036_Jsspsi3 = "chr_0036_jsspsi_3"
         case chr0036_Jsspsi5 = "chr_0036_jsspsi_5"
         case chr0036_Jsspsi7 = "chr_0036_jsspsi_7"
+        case chr0037_Minghe1 = "chr_0037_minghe_1"
+        case chr0037_Minghe3 = "chr_0037_minghe_3"
+        case chr0037_Minghe5 = "chr_0037_minghe_5"
+        case chr0037_Minghe7 = "chr_0037_minghe_7"
     }
 }
 
@@ -550,7 +558,11 @@ extension AttributeNodes {
         chr0036_Jsspsi1: Chr0004_Pelica1_Class?? = nil,
         chr0036_Jsspsi3: Chr0004_Pelica1_Class?? = nil,
         chr0036_Jsspsi5: Chr0004_Pelica1_Class?? = nil,
-        chr0036_Jsspsi7: Chr0004_Pelica1_Class?? = nil
+        chr0036_Jsspsi7: Chr0004_Pelica1_Class?? = nil,
+        chr0037_Minghe1: Chr0011_Seraph1_Class?? = nil,
+        chr0037_Minghe3: Chr0011_Seraph1_Class?? = nil,
+        chr0037_Minghe5: Chr0011_Seraph1_Class?? = nil,
+        chr0037_Minghe7: Chr0011_Seraph1_Class?? = nil
     ) -> AttributeNodes {
         return AttributeNodes(
             chr0007_Ikut1: chr0007_Ikut1 ?? self.chr0007_Ikut1,
@@ -692,7 +704,11 @@ extension AttributeNodes {
             chr0036_Jsspsi1: chr0036_Jsspsi1 ?? self.chr0036_Jsspsi1,
             chr0036_Jsspsi3: chr0036_Jsspsi3 ?? self.chr0036_Jsspsi3,
             chr0036_Jsspsi5: chr0036_Jsspsi5 ?? self.chr0036_Jsspsi5,
-            chr0036_Jsspsi7: chr0036_Jsspsi7 ?? self.chr0036_Jsspsi7
+            chr0036_Jsspsi7: chr0036_Jsspsi7 ?? self.chr0036_Jsspsi7,
+            chr0037_Minghe1: chr0037_Minghe1 ?? self.chr0037_Minghe1,
+            chr0037_Minghe3: chr0037_Minghe3 ?? self.chr0037_Minghe3,
+            chr0037_Minghe5: chr0037_Minghe5 ?? self.chr0037_Minghe5,
+            chr0037_Minghe7: chr0037_Minghe7 ?? self.chr0037_Minghe7
         )
     }
 
