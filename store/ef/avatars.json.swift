@@ -11,7 +11,7 @@ struct AvatarsJSONValue: Codable {
     let nameHash: String
     let rarity: Int
     let element: Element
-    let profession: String
+    let profession: Profession
     let weaponType: WeaponType
     let mainAttrID: Int
     let subAttrID: Int
@@ -65,7 +65,7 @@ extension AvatarsJSONValue {
         nameHash: String? = nil,
         rarity: Int? = nil,
         element: Element? = nil,
-        profession: String? = nil,
+        profession: Profession? = nil,
         weaponType: WeaponType? = nil,
         mainAttrID: Int? = nil,
         subAttrID: Int? = nil,
@@ -251,6 +251,10 @@ struct AttributeNodes: Codable {
     let chr0037_Minghe3: Chr0011_Seraph1_Class?
     let chr0037_Minghe5: Chr0011_Seraph1_Class?
     let chr0037_Minghe7: Chr0011_Seraph1_Class?
+    let chr0040_Sweetpie1: Chr0006_Wolfgd1_Class?
+    let chr0040_Sweetpie3: Chr0006_Wolfgd1_Class?
+    let chr0040_Sweetpie5: Chr0006_Wolfgd1_Class?
+    let chr0040_Sweetpie7: Chr0006_Wolfgd1_Class?
 
     enum CodingKeys: String, CodingKey {
         case chr0007_Ikut1 = "chr_0007_ikut_1"
@@ -397,6 +401,10 @@ struct AttributeNodes: Codable {
         case chr0037_Minghe3 = "chr_0037_minghe_3"
         case chr0037_Minghe5 = "chr_0037_minghe_5"
         case chr0037_Minghe7 = "chr_0037_minghe_7"
+        case chr0040_Sweetpie1 = "chr_0040_sweetpie_1"
+        case chr0040_Sweetpie3 = "chr_0040_sweetpie_3"
+        case chr0040_Sweetpie5 = "chr_0040_sweetpie_5"
+        case chr0040_Sweetpie7 = "chr_0040_sweetpie_7"
     }
 }
 
@@ -562,7 +570,11 @@ extension AttributeNodes {
         chr0037_Minghe1: Chr0011_Seraph1_Class?? = nil,
         chr0037_Minghe3: Chr0011_Seraph1_Class?? = nil,
         chr0037_Minghe5: Chr0011_Seraph1_Class?? = nil,
-        chr0037_Minghe7: Chr0011_Seraph1_Class?? = nil
+        chr0037_Minghe7: Chr0011_Seraph1_Class?? = nil,
+        chr0040_Sweetpie1: Chr0006_Wolfgd1_Class?? = nil,
+        chr0040_Sweetpie3: Chr0006_Wolfgd1_Class?? = nil,
+        chr0040_Sweetpie5: Chr0006_Wolfgd1_Class?? = nil,
+        chr0040_Sweetpie7: Chr0006_Wolfgd1_Class?? = nil
     ) -> AttributeNodes {
         return AttributeNodes(
             chr0007_Ikut1: chr0007_Ikut1 ?? self.chr0007_Ikut1,
@@ -708,7 +720,11 @@ extension AttributeNodes {
             chr0037_Minghe1: chr0037_Minghe1 ?? self.chr0037_Minghe1,
             chr0037_Minghe3: chr0037_Minghe3 ?? self.chr0037_Minghe3,
             chr0037_Minghe5: chr0037_Minghe5 ?? self.chr0037_Minghe5,
-            chr0037_Minghe7: chr0037_Minghe7 ?? self.chr0037_Minghe7
+            chr0037_Minghe7: chr0037_Minghe7 ?? self.chr0037_Minghe7,
+            chr0040_Sweetpie1: chr0040_Sweetpie1 ?? self.chr0040_Sweetpie1,
+            chr0040_Sweetpie3: chr0040_Sweetpie3 ?? self.chr0040_Sweetpie3,
+            chr0040_Sweetpie5: chr0040_Sweetpie5 ?? self.chr0040_Sweetpie5,
+            chr0040_Sweetpie7: chr0040_Sweetpie7 ?? self.chr0040_Sweetpie7
         )
     }
 
@@ -1108,6 +1124,15 @@ extension Attr {
 enum Formula: String, Codable {
     case baseAddition = "BaseAddition"
     case baseMultiplier = "BaseMultiplier"
+}
+
+enum Profession: String, Codable {
+    case assault = "ASSAULT"
+    case caster = "CASTER"
+    case defender = "DEFENDER"
+    case professionGUARD = "GUARD"
+    case supporter = "SUPPORTER"
+    case vanguard = "VANGUARD"
 }
 
 // MARK: - SkillInfoMap
